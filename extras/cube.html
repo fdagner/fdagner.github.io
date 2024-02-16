@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Würfel Animation</title>
+  <style>
+    #dice {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+      text-align: center;
+      line-height: 100px;
+      font-size: 28px;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+    }
+
+    .rolling {
+      animation: rollDiceAnimation 1s ease-in-out forwards;
+    }
+
+    @keyframes rollDiceAnimation {
+      0% { transform: rotateY(0deg); }
+      50% { transform: rotateY(360deg); }
+      100% { transform: rotateY(0deg); }
+    }
+  </style>
+</head>
+<body>
+  <div style="width:150px;margin: 0 auto;text-align: center;">
+  <div id="dice" onclick="rollDice()">Würfeln</div>
+  </div>
+  <script>function rollDice() {
+    var dice = document.getElementById('dice');
+    dice.classList.add('rolling'); // Füge die Klasse 'rolling' hinzu, um die Animation zu starten
+  
+    setTimeout(function() {
+      var diceValue = Math.floor(Math.random() * 6) + 1;
+      dice.innerText = diceValue;
+      dice.classList.remove('rolling'); // Entferne die Klasse 'rolling', um die Animation zu beenden
+    }, 1000); // Wartezeit für die Animation, hier 1 Sekunde
+  }
+  </script>
+</body>
+</html>
