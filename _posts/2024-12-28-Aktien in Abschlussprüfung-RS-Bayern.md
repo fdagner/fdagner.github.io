@@ -46,5 +46,5 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
 
 ### Beispiele
 
-![Beleg eines Aktienverkaufs](/assets/images/2024-12-28-wertpapier-verkauf-beleg.svg){: style="border: 1px solid #000" width="80%" }
+![Beleg eines Aktienverkaufs](/assets/images/2024-12-28-wertpapier-verkauf-beleg.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
 
