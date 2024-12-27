@@ -62,9 +62,7 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
 ![Beleg eines Aktienkaufs](/assets/images/2024-12-28-Aktienverkauf.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
 
 <div id="aufgabe">
-
-  <h2>Aufgabe</h2>
-        Am 26.12.2024 verkaufen wir 330 Aktien der „Holz Design AG“.
+       Am 26.12.2024 verkaufen wir 330 Aktien der „Holz Design AG“.
         Die Spesen betragen 1 % vom Kurswert. Die Banklastschrift beim Kauf betrug 34.450,52&nbsp;€. Bilde den Buchungssatz.<br><br>
         <h3>Lösung</h3>
            <h4>Nebenrechnung</h4>
