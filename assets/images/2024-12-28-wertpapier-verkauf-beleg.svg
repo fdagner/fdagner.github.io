@@ -1,0 +1,87 @@
+<svg id="wertpapierSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 430" style="background-color:#fff;padding:0px;width:100%;max-width:760px;border: 1px solid #ccc;border-bottom:0px" onload="SVGonLoadWertpapiere()" width="760" height="430">
+  <defs id="customDefsWertpapiere">
+  </defs>
+
+  <!-- Kontoauszug-Rahmen -->
+  <rect x="0" y="0" width="760" height="430" fill="#ffffff" stroke="#000" stroke-width="2"></rect>
+  <line x1="0" x2="760" y1="50" y2="50" stroke-width="5" stroke="#b61e37"></line>
+
+  <!-- Überschrift -->
+  <text x="5" y="35" font-family="Courier" font-size="26" text-anchor="start" fill="#000000">Wertpapier-Abrechnung</text>
+  <text id="wertpapiereBank" x="750" y="35" font-family="Courier" font-size="26" text-anchor="end" fill="#000000">Hausbank</text>
+
+  <!-- Kontodaten -->
+  <text x="10" y="90" font-family="Courier" font-size="18" fill="#333333" text-anchor="start">
+    <tspan id="wertpapiereName">Sprezzatura Lederkunst e. Kfr.</tspan>
+  </text>
+  <text x="10" y="110" font-family="Courier" font-size="18" fill="#333333" text-anchor="start">
+    <tspan id="wertpapiereStrasse">Kleinreuther Straße 14</tspan>
+  </text>
+  <text x="10" y="130" font-family="Courier" font-size="18" fill="#333333" text-anchor="start">
+    <tspan id="wertpapiereOrt">90431 Nürnberg</tspan>
+  </text>
+
+   <text x="350" y="90" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Auftragsnummer:</text>
+  <text font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="90" id="wertpapiereAuftragsnummer">9027194</text>
+  <text x="350" y="110" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Verwahrungsart:</text>
+  <text id="wertpapierAuftrag" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="110">Girosammeldepot</text>
+  <text x="350" y="130" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Depotnummer:</text><text id="wertpapiereID" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="130">228</text>
+  <text x="350" y="150" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Börsenplatz:</text><text id="wertpapierAuftrag" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="150">München</text>
+  <text x="350" y="170" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">ISIN:</text><text font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="170" id="wertpapiereISIN">DE0234100110</text>
+  <text x="350" y="190" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Schlusstag/-zeit:</text>
+  <text id="wertpapierAuftrag" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="190"><tspan id="wertpapiereTag">01</tspan>.<tspan id="wertpapiereMonat">01</tspan>.<tspan class="aktuellesJahrWertpapiere"></tspan>/<tspan id="wertpapiereUhrzeit">12:08 Uhr</tspan></text>
+
+  <!-- Abrechnung -->
+  <text x="20" y="240" font-family="Courier" font-size="18" fill="#333333" text-anchor="start">Wir haben für Sie <tspan id="wertpapiereArt">verkauft</tspan>:</text>
+  <rect x="10" y="265" width="740" height="40" fill="pink"></rect>
+  <text x="20" y="290" font-family="Courier" font-size="18" fill="#333333" text-anchor="start"><tspan id="wertpapiereAnzahl">130</tspan> <tspan id="wertpapiereBezeichnung">Holz Design Aktien</tspan> zum Stückkurs von <tspan id="wertpapiereStueckkurs">80,00 €</tspan> </text>
+
+<text x="20" y="345" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" font-weight="bold">Kurswert</text><text x="500" y="345" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereKurswert">10.400,00 €</text>
+<text x="20" y="365" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" id="wertpapiereSpesenart" font-weight="bold">- 1 % Spesen</text><text x="500" y="365" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereSpesen">104,00 €</text>
+<line x1="20" x2="500" y1="370" y2="370" stroke-width="1" stroke="#000"></line>
+<text x="20" y="385" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" id="wertpapiereBankart" font-weight="bold">Bankgutschrift</text><text x="500" y="385" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereBanklastschrift">10.296,00 €</text>
+
+  <!-- Footer -->
+  
+
+
+
+<circle cx="10" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="30" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="50" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="70" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="90" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="110" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="130" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="150" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="170" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="190" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="210" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="230" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="250" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="270" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="290" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="310" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="330" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="350" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="370" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="390" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="410" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="430" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="450" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="470" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="490" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="510" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="530" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="550" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="570" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="590" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="610" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="630" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="650" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="670" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="690" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="710" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="730" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+<circle cx="750" cy="430" r="10" stroke-width="1" stroke="gray" fill="white"></circle>
+</svg>
