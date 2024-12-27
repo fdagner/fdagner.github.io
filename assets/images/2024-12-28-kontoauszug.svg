@@ -1,0 +1,46 @@
+<svg id="kontoauszugSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 430" style="background-color:#fff;padding:0px;width:100%;max-width:760px;border: 1px solid #ccc;" onload="SVGonLoadKontoauszug()" width="760" height="430">
+     <defs id="customDefsKontoauszug">
+  </defs>
+
+  <!-- Kontoauszug-Rahmen -->
+  <rect x="0" y="0" width="760" height="430" fill="#ffffff" stroke="#fff" stroke-width="2"></rect>
+
+  <!-- Überschrift -->
+  <rect x="0" y="0" width="760" height="50" fill="#ff0000"></rect>
+  <text id="kontoauszugBank" x="750" y="35" font-family="Verdana" font-size="28" text-anchor="end" fill="#ffffff">Hausbank</text>
+  
+  <!-- Kontodaten -->
+  <text x="10" y="75" font-family="Verdana" font-size="16" fill="#333333">IBAN: <tspan id="kontoauszugIban">DE89300000445322213034</tspan> BIC: <tspan id="kontoauszugBic">GENODEF1NGB</tspan></text>
+  <text x="750" y="75" font-family="Verdana" font-size="16" fill="#333333" text-anchor="end">Auszug Nr. <tspan id="kontoauszugNummer">12</tspan>/<tspan class="aktuellesJahrKontoauszug"></tspan></text>
+  <text x="10" y="350" font-family="Verdana" font-size="16" fill="#333333" text-anchor="start">Kontoinhaber</text>
+  <text x="10" y="370" font-family="Verdana" font-size="16" fill="#333333" text-anchor="start"><tspan id="kontoauszugName">Isabella Sprezzatura, Sprezzatura Lederkunst</tspan></text>
+  <text x="10" y="390" font-family="Verdana" font-size="16" fill="#333333" text-anchor="start"><tspan id="kontoauszugAdresse">Kleinreuther Straße 14</tspan></text>
+  <text x="10" y="410" font-family="Verdana" font-size="16" fill="#333333" text-anchor="start"><tspan id="kontoauszugOrt">90431 Nürnberg</tspan></text>
+
+  <!-- Transaktionsdetails -->
+  <rect x="0" y="130" width="760" height="2" fill="#000"></rect>
+  <rect x="0" y="290" width="760" height="2" fill="#000"></rect>
+  <text x="15" y="120" font-family="Verdana" font-size="18" fill="#888">BuTag</text>
+  <text x="90" y="120" font-family="Verdana" font-size="18" fill="#888">Wert</text>
+  <text x="175" y="120" font-family="Verdana" font-size="18" fill="#888">Vorgang</text>
+  <text x="750" y="120" font-family="Verdana" font-size="18" fill="#888" text-anchor="end">
+  Alter Kontostand: <tspan id="kontoauszugKontostand_alt">41.500,00 € +</tspan></text>
+  <text x="750" y="317" font-family="Verdana" font-size="18" fill="#888" text-anchor="end">
+  Neuer Kontostand: <tspan id="kontoauszugKontostand_neu">42.072,00 € +</tspan></text>
+ 
+  <!-- Beispieltransaktionen -->
+  <g id="kontoauszugDatum1"><text x="15" y="160" font-family="Verdana" font-size="18" fill="#333333"><tspan class="kontoauszugDatum">09.02.</tspan></text>
+  <text x="90" y="160" font-family="Verdana" font-size="18" fill="#333333"><tspan class="kontoauszugDatum">09.02.</tspan></text></g>
+  <text id="kontoauszugVorgang1" x="175" y="160" font-family="Verdana" font-size="18" fill="#333333">Dividende für 130 Holz Design AG Aktien</text>
+  <text id="kontoauszugWertstellung1" x="750" y="160" font-family="Verdana" font-size="18" fill="#333333" text-anchor="end">600,00 € +</text>
+  <g id="kontoauszugDatum2"><text x="15" y="210" font-family="Verdana" font-size="18" fill="#333333"><tspan class="kontoauszugDatum">09.02.</tspan></text>
+  <text x="90" y="210" font-family="Verdana" font-size="18" fill="#333333"><tspan class="kontoauszugDatum">09.02.</tspan></text></g>
+  <text id="kontoauszugVorgang2" x="175" y="210" font-family="Verdana" font-size="18" fill="#333333">Depotgebühren Depot-Nr. 228</text>
+  <text id="kontoauszugWertstellung2" x="750" y="210" font-family="Verdana" font-size="18" fill="#333333" text-anchor="end">28,00 € –</text>
+  
+  <text id="kontoauszugVorgang3" x="175" y="260" font-family="Verdana" font-size="18" fill="#333333"></text>
+  <text id="kontoauszugWertstellung3" x="750" y="260" font-family="Verdana" font-size="18" fill="#333333" text-anchor="end"></text>
+  
+  <!-- Footer -->
+  <text x="755" y="410" font-family="Verdana" font-size="14" fill="#888" text-anchor="end">Auszug vom <tspan class="kontoauszugDatum">09.02.</tspan>, letzter Auszug am <tspan class="kontoauszugDatum-7">02.02.</tspan></text>
+</svg>

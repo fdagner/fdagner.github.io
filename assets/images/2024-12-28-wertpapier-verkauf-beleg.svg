@@ -1,4 +1,4 @@
-<svg id="wertpapierSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 430" style="background-color:#fff;padding:0px;width:100%;max-width:760px;border: 1px solid #ccc;border-bottom:0px" onload="SVGonLoadWertpapiere()" width="760" height="430">
+<svg id="wertpapierSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 430" style="background-color:#fff;padding:0px;width:100%;max-width:760px;border: 0px solid #ccc;border-bottom:0px" onload="SVGonLoadWertpapiere()" width="760" height="430">
   <defs id="customDefsWertpapiere">
   </defs>
 
@@ -22,24 +22,24 @@
   </text>
 
    <text x="350" y="90" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Auftragsnummer:</text>
-  <text font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="90" id="wertpapiereAuftragsnummer">1261233</text>
+  <text font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="90" id="wertpapiereAuftragsnummer">2322092</text>
   <text x="350" y="110" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Verwahrungsart:</text>
   <text id="wertpapierAuftrag" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="110">Girosammeldepot</text>
   <text x="350" y="130" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Depotnummer:</text><text id="wertpapiereID" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="130">228</text>
   <text x="350" y="150" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Börsenplatz:</text><text id="wertpapierAuftrag" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="150">München</text>
   <text x="350" y="170" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">ISIN:</text><text font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="170" id="wertpapiereISIN">DE0007100000</text>
   <text x="350" y="190" font-family="Courier" font-size="18" fill="#666" text-anchor="start" font-weight="bold">Schlusstag/-zeit:</text>
-  <text id="wertpapierAuftrag" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="190"><tspan id="wertpapiereTag">01</tspan>.<tspan id="wertpapiereMonat">01</tspan>.<tspan class="aktuellesJahrWertpapiere"></tspan>/<tspan id="wertpapiereUhrzeit">11:06 Uhr</tspan></text>
+  <text id="wertpapierAuftrag" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" x="750" y="190"><tspan id="wertpapiereTag">07</tspan>.<tspan id="wertpapiereMonat">03</tspan>.<tspan class="aktuellesJahrWertpapiere"></tspan>/<tspan id="wertpapiereUhrzeit">15:01 Uhr</tspan></text>
 
   <!-- Abrechnung -->
-  <text x="20" y="240" font-family="Courier" font-size="18" fill="#333333" text-anchor="start">Wir haben für Sie <tspan id="wertpapiereArt">verkauft</tspan>:</text>
+  <text x="20" y="240" font-family="Courier" font-size="18" fill="#333333" text-anchor="start">Wir haben für Sie <tspan id="wertpapiereArt">gekauft</tspan>:</text>
   <rect x="10" y="265" width="740" height="40" fill="pink"></rect>
   <text x="20" y="290" font-family="Courier" font-size="18" fill="#333333" text-anchor="start"><tspan id="wertpapiereAnzahl">70</tspan> <tspan id="wertpapiereBezeichnung">XY-Aktien</tspan> zum Stückkurs von <tspan id="wertpapiereStueckkurs">200,00 €</tspan> </text>
 
 <text x="20" y="345" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" font-weight="bold">Kurswert</text><text x="500" y="345" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereKurswert">14.000,00 €</text>
-<text x="20" y="365" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" id="wertpapiereSpesenart" font-weight="bold">- 1 % Spesen</text><text x="500" y="365" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereSpesen">140,00 €</text>
+<text x="20" y="365" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" id="wertpapiereSpesenart" font-weight="bold">+ 1 % Spesen</text><text x="500" y="365" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereSpesen">140,00 €</text>
 <line x1="20" x2="500" y1="370" y2="370" stroke-width="1" stroke="#000"></line>
-<text x="20" y="385" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" id="wertpapiereBankart" font-weight="bold">Bankgutschrift</text><text x="500" y="385" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereBanklastschrift">13.860,00 €</text>
+<text x="20" y="385" font-family="Courier" font-size="18" fill="#333333" text-anchor="start" id="wertpapiereBankart" font-weight="bold">Banklastschrift</text><text x="500" y="385" font-family="Courier" font-size="18" fill="#333333" text-anchor="end" id="wertpapiereBanklastschrift">14.140,00 €</text>
 
   <!-- Footer -->
   
