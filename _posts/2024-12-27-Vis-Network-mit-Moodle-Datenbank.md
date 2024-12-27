@@ -51,7 +51,7 @@ Das Ergebnis sieht dann so aus:
 [![Screenshot Beschreibung](/assets/images/2024-12-27-beispiel-organigramm.png)](/assets/images/2024-12-27-beispiel-organigramm.png)
 
 ### Vis Network und Datenschutz
-Da Vis network auf eine externe Bibliothek zugreift, stellt sich die Frage, wie personenbezogene Daten geschützt werden. Wenn Inhalte aus externen Quellen geladen werden, könnte dies Nutzerdaten an Dritte weitergeben. Es ist daher wichtig, sicherzustellen, dass alle externen Ressourcen datenschutzkonform eingebunden werden und lokal gespeichert sind. In der Datenbank-Aktivität gibt es ein vorgesehenes Feld für JavaScript. Mit der vis.js-Bibliothek funktioniert das allerdings nicht. 
+Da Vis Network auf eine externe Bibliothek zugreift, stellt sich die Frage, wie personenbezogene Daten geschützt werden. Wenn Inhalte aus externen Quellen geladen werden, könnte dies Nutzerdaten an Dritte weitergeben. Es ist daher wichtig, sicherzustellen, dass alle externen Ressourcen datenschutzkonform eingebunden werden und lokal gespeichert sind. In der Datenbank-Aktivität gibt es ein vorgesehenes Feld für JavaScript. Mit der vis.js-Bibliothek funktioniert das allerdings nicht. 
 Das Script muss als externe Verlinkung eingebunden werden:
 ```javascript
 <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
@@ -80,7 +80,7 @@ Der Vorteil ist, dass man die Aktivität kopieren/duplizieren bzw. auch wiederhe
 Die Verwendung von Vis Network mit der Moodle-Datenbank bietet zahlreiche Vorteile. Schüler können nicht nur ihre eigenen Abgaben einsehen, sondern auch andere Lösungen diskutieren und kommentieren. Durch die vielseitigen Einstellungsmöglichkeiten können Lehrende verschiedene Aspekte der Abgaben und Interaktionen anpassen. Schüler könnten zum Beispiel ihre eigene Lösung erst einreichen müssen, bevor sie die Lösungen anderer sehen. Diese Funktionen tragen zu einer individuellen und kooperativen Lernumgebung bei, ohne dass zusätzliche visuelle Darstellungen oder externe Tools erforderlich sind.
 
 ### Fazit
-Die Nutzung von vis-network in Moodle fördert aktives, selbstständiges Arbeiten der Schüler und ermöglicht eine interaktive und kooperative Lernumgebung. Durch datenschutzkonforme Implementierung bleiben die Vorteile erhalten, ohne gegen Datenschutzrichtlinien zu verstoßen.
+Die Nutzung von Vis Network in Moodle fördert aktives, selbstständiges Arbeiten der Schüler und ermöglicht eine interaktive und kooperative Lernumgebung. Durch datenschutzkonforme Implementierung bleiben die Vorteile erhalten, ohne gegen Datenschutzrichtlinien zu verstoßen.
 
 ---
 #### Anlagen
