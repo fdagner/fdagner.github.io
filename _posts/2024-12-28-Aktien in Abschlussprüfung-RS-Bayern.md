@@ -63,19 +63,19 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
 
 <div id="aufgabe">
        Am 26.12.2024 verkaufen wir 330 Aktien der „Holz Design AG“.
-        Die Spesen betragen 1 % vom Kurswert. Die Banklastschrift beim Kauf betrug 34.450,52&nbsp;€. Bilde den Buchungssatz.<br><br>
+        Die Spesen betragen 1 % vom Kurswert. Die Banklastschrift beim Kauf betrug 24.450,52&nbsp;€. Bilde den Buchungssatz.<br><br>
         <h3>Lösung</h3>
            <h4>Nebenrechnung</h4>
          <table style="border-collapse: collapse;white-space:nowrap;width:400px;margin: 0 0">
             <tbody><tr>
-                <td>Kurswert (330 x 111,00 €)</td>
-                <td style="padding-left:6px;text-align:right;">36.630,00&nbsp;€</td><td style="padding-left:6px;text-align:right;">100 %</td>
+                <td>Kurswert (330 x 82,00 €)</td>
+                <td style="padding-left:6px;text-align:right;">27.060,00&nbsp;€</td><td style="padding-left:6px;text-align:right;">100 %</td>
             </tr>
             <tr>
-                <td>- Spesen</td><td style="padding-left:6px;text-align:right;">366,30&nbsp;€</td><td style="padding-left:6px;text-align:right;">1 %</td>
+                <td>- Spesen</td><td style="padding-left:6px;text-align:right;">270,60&nbsp;€</td><td style="padding-left:6px;text-align:right;">1 %</td>
             </tr>
             <tr>
-                <td style="border-top: solid 1px #ccc">= Bankgutschrift</td><td style="border-top: solid 1px #ccc;padding-left:6px;text-align:right;">36.263,70&nbsp;€</td><td style="border-top: solid 1px #ccc;padding-left:6px;text-align:right;">99 %</td>
+                <td style="border-top: solid 1px #ccc">= Bankgutschrift</td><td style="border-top: solid 1px #ccc;padding-left:6px;text-align:right;">26.789,40&nbsp;€</td><td style="border-top: solid 1px #ccc;padding-left:6px;text-align:right;">99 %</td>
             </tr>
         </tbody></table>
         <br>
@@ -83,17 +83,17 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
         <table style="margin:0;white-space:nowrap;font-family:courier;min-width:660px;background: white;"><tbody>
             <tr>
             <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 150px;max-width: 150px" tabindex="1">2800 BK</td>
-             <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 160px;max-width: 140px;text-align: right" tabindex="1">36.263,70&nbsp;€</td>
+             <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 160px;max-width: 140px;text-align: right" tabindex="1">26.789,40&nbsp;€</td>
                        <td style="text-align: center;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 80px" tabindex="1">an</td>
             <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 150px;max-width: 150px" tabindex="1">1500 WP</td>
-            <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 160px;max-width: 140px;text-align: right" tabindex="1">34.450,52&nbsp;€</td>
+            <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 160px;max-width: 140px;text-align: right" tabindex="1">24.450,52&nbsp;€</td>
             </tr>
             <tr>
             <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 150px;max-width: 150px;background: white;" tabindex="1"></td>
              <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 160px;max-width: 140px;text-align: right;background: white;" tabindex="1"></td>
                        <td style="text-align: center;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 80px;background: white;" tabindex="1"></td>
             <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 150px;max-width: 150px;background: white;" tabindex="1">5650 EAWP</td>
-            <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 160px;max-width: 140px;text-align: right;background: white;" tabindex="1">1.813,18&nbsp;€</td>
+            <td style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis;width: 160px;max-width: 140px;text-align: right;background: white;" tabindex="1">2.338,88&nbsp;€</td>
             </tr></tbody></table>
    
     </div>
