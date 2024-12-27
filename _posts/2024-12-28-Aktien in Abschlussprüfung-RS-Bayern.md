@@ -48,7 +48,7 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
 
 ### Abrechnung Kauf
 
-![Beleg eines Aktienkauf](/assets/images/2024-12-28-wertpapier-verkauf-beleg.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
+![Beleg eines Aktienkauf](/assets/images/2024-12-28-wertpapier-verkauf-beleg.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="95%" }
 
 ### Zeitungsartikel
   <div id="newspaperDiv" style="max-width: 700px;background-color: #f5f5f5;padding:4px;margin: 0 auto;">
@@ -59,7 +59,7 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
 
 ### Aufgabe Aktienverkauf
 
-![Kursentwicklung Chart](/assets/images/2024-12-28-Aktienverkauf.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
+![Kursentwicklung Chart](/assets/images/2024-12-28-Aktienverkauf.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="95%" }
 
 <div id="aufgabe">
        Am 26.12.2024 verkaufen wir 330 Aktien der „Holz Design AG“.
@@ -100,4 +100,4 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
 
 ### Kontoauszug
     
-![Kontoauszug](/assets/images/2024-12-28-kontoauszug.svg){: style="border: 1px solid #ccc;" width="80%" }
+![Kontoauszug](/assets/images/2024-12-28-kontoauszug.svg){: style="border: 1px solid #ccc;" width="95%" }
