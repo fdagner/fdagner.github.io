@@ -14,7 +14,7 @@ categories: [Moodle, BwR]
 ### Lehrplanbezug (Beispiel)
 Im Lehrplan für Betriebswirtschaftslehre in der 9. Klasse der Realschule Bayern lernen die Schüler die Aufgaben der Unternehmensführung und den hierarchischen Aufbau eines Unternehmens kennen. Ein zentraler Bestandteil ist das Organigramm, das die Struktur und die Leitungssysteme wie Liniensysteme veranschaulicht. Mit vis-network können Schüler interaktive Organigramme erstellen, die die hierarchische Struktur eines Unternehmens anschaulich darstellen. Das Tool ermöglicht es, die verschiedenen Leitungsebenen und ihre Beziehungen dynamisch zu visualisieren und so den komplexen Aufbau eines Unternehmens leichter zu verstehen.
 
-### Argumente für vis-network
+### Argumente für Vis Network
 Die syntaxgebundene Erstellung, wie sie bei vis-network verwendet wird, hat den Vorteil, dass sich die Schüler gänzlich auf den Inhalt konzentrieren können, anstatt Zeit mit der Gestaltung und Anordnung von Elementen zu verbringen, wie es bei grafischen Tools wie PowerPoint der Fall ist. Die Struktur wird durch die spezielle Syntax klar definiert, was die Darstellung der Hierarchie vereinfacht und eine präzise, nachvollziehbare Gestaltung ermöglicht. Zudem können komplexe, dynamische Beziehungen zwischen verschiedenen Elementen leichter dargestellt und verändert werden, ohne dass man sich mit Layouts und visuellen Feinheiten auseinandersetzen muss.
 
 ### Anpassung der Datenbankvorlage
