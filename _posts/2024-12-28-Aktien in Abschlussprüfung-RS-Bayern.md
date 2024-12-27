@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Aktien in Abschlussprüfung BwR (RS Bayern)"
-date: 2024-12-27
+date: 2024-12-27 18:34:45 +0100
 categories: [BwR]
 ---
 
