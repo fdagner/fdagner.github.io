@@ -98,6 +98,6 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
    
     </div>
 
-#### Kontoauszug
+### Kontoauszug
     
-![Kntoauszug](/assets/images/2024-12-28-kontoauszug.svg){: style="border: 1px solid #ccc;" width="80%" }
+![Kontoauszug](/assets/images/2024-12-28-kontoauszug.svg){: style="border: 1px solid #ccc;" width="80%" }
