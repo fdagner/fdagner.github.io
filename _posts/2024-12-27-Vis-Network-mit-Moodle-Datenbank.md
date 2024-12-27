@@ -8,7 +8,7 @@ categories: [Moodle, BwR]
 ### Neue Datenbankvorlage
 [Matthias Giger](https://gigers.com/blog/) hat am 24.12.2024 für die Moodlebande ein verspätetes [Weihnachtsgeschenk angekündigt](https://bildung.social/deck/@matthiasgiger/113707959358693732): Eine Datenbankvorlage auf Basis von vis.js, die seit 26. Dezember verfügbar ist. Das klingt nach einer spannenden Idee!
 
-### Was ist vis-network?
+### Was ist Vis Network?
 [Vis network](https://visjs.github.io/vis-network/examples/) ist eine JavaScript-Bibliothek, die es ermöglicht, Knoten in einer graphischen Darstellung zu visualisieren. Häufig wird sie für die Darstellung von Netzwerken, Beziehungen oder Hierarchien genutzt. 
 
 ### Lehrplanbezug (Beispiel)
