@@ -31,6 +31,14 @@ theme: minima
 plugins:
   - jekyll-feed
 
+Navigation:
+  - title: Home
+    url: /index.md
+  - title: BwR-Helfer
+    url: https://oer.fdagner.de/bwr/
+  - title: Klimadiagramme
+    url: https://oer.fdagner.de/klimadiagramme/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
