@@ -41,8 +41,8 @@ Wichtig erscheint auch der Vergleich zu anderen Anlageformen (AP 2024: Fonds, AP
 ### Aufgaben und Belege erstellen
 Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle notwendigen Belege und Aufgaben in wenigen Minuten erstellen.
 
-- [Belegegenerator](https://oer.fdagner.de/bwr/belege.html) für Zeitungsartikel, Abrechnung Wertpapierkauf/-verkauf und Kontoauszüge .
-- [Aufgabengenerator](https://oer.fdagner.de/bwr/aktienkurs.html) für Kauf und Verkauf von Aktien und ein Diagramm das die Kursentwicklung.zeigt
+- [Belegegenerator](https://oer.fdagner.de/bwr/belege.html) für Zeitungsartikel, Abrechnung Wertpapierkauf/-verkauf und Kontoauszüge.
+- [Aufgabengenerator](https://oer.fdagner.de/bwr/aktienkurs.html) für Kauf und Verkauf von Aktien und ein Diagramm das die Kursentwicklung zeigt.
 
 ### Beispiele
 
