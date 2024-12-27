@@ -58,7 +58,7 @@ Das Script muss als externe Verlinkung eingebunden werden:
 ```
 In der Vorlage von Matthias Giger wir dies in in der "Vorlage für Einzelansicht" realisiert.
 
-Damit man dies datenschutzkonform umsetzen kann sind die folgenden Schritte notwendig:
+Damit man dies datenschutzkonform umsetzen kann, sind die folgenden Schritte notwendig:
 
 1. Download der Datei [https://unpkg.com/vis-network/dist/vis-network.min.js](https://unpkg.com/vis-network/dist/vis-network.min.js).
 2. Oben genannten Code aus der "Vorlage für Einzelansicht" löschen
