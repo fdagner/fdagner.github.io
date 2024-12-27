@@ -46,9 +46,9 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
 
 ### Beispiele
 
-### Abrechnung Verkauf
+### Abrechnung Kauf
 
-![Beleg eines Aktienverkaufs](/assets/images/2024-12-28-wertpapier-verkauf-beleg.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
+![Beleg eines Aktienkauf](/assets/images/2024-12-28-wertpapier-verkauf-beleg.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
 
 ### Zeitungsartikel
   <div id="newspaperDiv" style="max-width: 700px;background-color: #f5f5f5;padding:4px;margin: 0 auto;">
@@ -57,9 +57,9 @@ Mit dem [BwR-Helfer](https://oer.fdagner.de/bwr/index.html) können Sie alle not
                     <blockquote id="newspaperSource">GPT-News</blockquote>
               </div>
 
-### Aufgabe Aktienkauf
+### Aufgabe Aktienverkauf
 
-![Beleg eines Aktienkaufs](/assets/images/2024-12-28-Aktienverkauf.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
+![Kursentwicklung Chart](/assets/images/2024-12-28-Aktienverkauf.svg){: style="border: 1px solid #ccc;border-bottom: 0;" width="80%" }
 
 <div id="aufgabe">
        Am 26.12.2024 verkaufen wir 330 Aktien der „Holz Design AG“.
