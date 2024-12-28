@@ -10,6 +10,14 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
+      {% if page.categories %}
+      - Kategorien:
+        {% for category in page.categories %}
+          <a href="/category/{{ category | slugify }}/">{{ category }}</a>
+        {% endfor %}
+   
+  </ul>
+{% endif %}
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>

@@ -30,14 +30,18 @@ permalink: /:year/:month/:day/:title/
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-archives
 
-Navigation:
-  - title: Home
-    url: /index.md
-  - title: BwR-Helfer
-    url: https://oer.fdagner.de/bwr/
-  - title: Klimadiagramme
-    url: https://oer.fdagner.de/klimadiagramme/
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category_archive # für Kategorenseiten
+  permalinks:
+    category: '/category/:name/'
+
+header_pages:
+  - pages/csv-moodle-konverter.md
+  - index.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
