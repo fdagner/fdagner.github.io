@@ -10,12 +10,6 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      {% if page.categories %}
-      - Kategorien:
-        {% for category in page.categories %}
-          <a href="/category/{{ category | slugify }}/">{{ category }}</a>
-        {% endfor %}
-   
   </ul>
 {% endif %}
       {%- if page.author -%}
