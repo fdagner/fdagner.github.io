@@ -4,4 +4,3 @@ gem "minima", "~> 2.5"
 gem "csv"
 gem "base64"
 gem "jekyll-archives"
-
