@@ -12,7 +12,7 @@ layout: default
       </time>{% if page.categories %}
       - Kategorien:
         {% for category in page.categories %}
-          <a href="/kategorie/{{ category | slugify }}/">{{ category }}</a>
+          <a href="/kategorie/{{ category | slugify }}">{{ category }}</a>
         {% endfor %}
     {% endif %}
   </ul>
