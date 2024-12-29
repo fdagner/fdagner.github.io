@@ -40,8 +40,17 @@ jekyll-archives:
     category: '/category/:name/'
 
 header_pages:
-  - pages/csv-moodle-konverter.md
-  - index.md
+  - title: OER
+    url: 
+    children:
+      - title: BwR-Helfer
+        url: https://oer.fdagner.de/bwr/
+      - title: Klimadiagramme
+        url: https://oer.fdagner.de/klimadiagramme/
+      - title: Farbmodelle mischen
+        url: https://oer.fdagner.de/color-models/
+      - title: CSV-Moodle-Konverter
+        url: /csv-moodle-konverter/  
 
 # Exclude from processing.
 # The following items will not be processed, by default.
