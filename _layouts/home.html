@@ -4,29 +4,37 @@ layout: default
 
 <div class="home">
   {% if page.title %}
-  <h1 class="page-heading">{{ page.title }}</h1>
-{% endif %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {% endif %}
 
-{{ content }}
+  {{ content }}
 
-{%- if site.posts.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Beiträge" }}</h2>
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}
-      </span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-{%- endif -%}
+  {%- if paginator.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Beiträge" }}</h2>
+    <ul class="post-list">
+      {%- for post in paginator.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">« Neuere Beiträge</a>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Ältere Beiträge »</a>
+      {% endif %}
+    </div>
+  {%- endif -%}
 </div>
