@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'FiraCode'; /* Name der Schriftart */
+  src: url('../fonts/FiraCode-Regular.ttf') format('truetype');
+  font-weight: normal; /* Optional: font-weight */
+  font-style: normal; /* Optional: font-style */
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../fonts/FiraCode-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 /* Add a black background color to the top navigation */
 .topnav {
     overflow: hidden;
