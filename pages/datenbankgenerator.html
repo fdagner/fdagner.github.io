@@ -1,0 +1,272 @@
+---
+layout: page
+title: "Moodle-Datenbank-Aktivität-Generator"
+permalink: /moodle-datenbank-generator/
+categories: [moodle]
+---
+<style>
+    #contentE {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    #contentlabels {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5em;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-content {
+        display: flex;
+        flex-direction: column;
+       }
+    .indent {
+        margin-left: 1rem;
+    }
+    
+    </style>
+<hr>
+<h2>Schritt 1: Datenbank-Aktivität in Moodle anlegen</h2>
+<p>In Moodle sollten eine Datenbank-Aktivität und die gewünschten Datenbankfelder angelegt sein.</p>
+  <hr><h2>Schritt 2: Anzahl der Spalten festlegen und definieren</h2>
+    Anzahl der Felder: <input type="number" min="0" max="15" id="cols" placeholder="0" onchange="createColumns(this);createRows(this);">
+            <br><br>
+      <div id="contentE"></div><br><div>Überschrift Listenansicht: <input placeholder='Hier Text eingeben' value='' id='headerlist' type='string' type='text'><br>Überschrift Einzelansicht: <input value='' placeholder='Hier Element eintragen' id='headersingle' type='string' type='text'></div><br><p>Feldname1, Feldname2 usw. sind die Spaltenbezeichner in der Tabelle.<br>Element1, Element2 usw. sind die dynamischen Elemente.</p>
+      <p><a href="https://docs.moodle.org/311/de/Datenbank_erstellen#Syntax_in_Datenbankvorlagen">Verfügbare Elemente</a>:<ul><li>Datenbankfelder mit eckigen Klammern angeben: [[fieldname]]</li><li>Aktionen: ##edit## - ##delete## - ##approve## - ##disapprove## - ##more## - ##moreurl## - ##comments##</li><li>Andere: ##timeadded## - ##timemodified## - ##user## - ##userpicture## - ##approvalstatus##</li><li>Element1 verlinkt auf die Einzelansicht</li><li>Link zu Bearbeiten, Einzelansicht und Löschen werden standardmäßig hinzugefügt</li></li></ul></p>
+      <br>
+<hr>
+<h2>Schritt 3: Einstellungen</h2>
+<h3>Einzelansicht</h3>
+<div id="contentlabels">
+<div class="col-content">
+<form>
+    <label for="tablecolorsingle">Farbschema Tabellenkopf:</label><br>
+    <select name="tablecolorsingle" id="tablecolorsingle">
+        <option value="table-default">Standard</option>
+        <option value="table-primary">Primär</option>
+      <option value="table-secondary">Sekundär</option>
+      <option value="table-success">Erfolg</option>
+      <option value="table-danger">Gefahr</option>
+      <option value="table-light">Hell</option>
+      <option value="table-dark">Dunkel</option>
+      <option value="bg-primary text-white">Primär kräftig</option>
+      <option value="bg-secondary text-white">Sekundär kräftig</option>
+      <option value="bg-success text-white">Erfolg kräftig</option>
+      <option value="bg-danger text-white">Gefahr kräftig</option>
+    </select>
+</form>
+</div>
+<div class="col-content">
+<form>
+    <label for="tablereactsingle">Farbschema Zeilen:</label><br>
+    <select name="tablereactsingle" id="tablereactsingle">
+      <option value="">Keine Farbe</option>
+      <option value="table-striped">abwechselnd</option>
+      <option value="table-hover">Mouseover</option>
+            </select>
+</form>
+</div>
+<div class="col-content">
+  <form>
+      <label for="tablewidthsingle">Breite begrenzen:</label><br>
+      <select name="tablewidthsingle" id="tablewidthsingle">
+        <option value="100%">Volle Breite</option>
+        <option value="400px">400px</option>
+        <option value="600px">600px</option>
+        <option value="800px">800px</option>
+        <option value="1000px">1000px</option>
+        <option value="1200px">1200px</option>
+        <option value="1400px">1400px</option>     
+        <option value="1600px">1600px</option>    
+        <option value="1800px">1800px</option>    
+      </select>
+  </form>
+  </div>
+</div>
+<br>
+<h3>Listenansicht</h3>
+<div id="contentlabels">
+<div class="col-content">
+<form>
+  <label for="tablecolor">Farbschema Tabellenkopf:</label><br>
+  <select name="tablecolor" id="tablecolor">
+      <option value="table-default">Standard</option>
+      <option value="table-primary">Primär</option>
+    <option value="table-secondary">Sekundär</option>
+    <option value="table-success">Erfolg</option>
+    <option value="table-danger">Gefahr</option>
+    <option value="table-light">Hell</option>
+    <option value="table-dark">Dunkel</option>
+    <option value="bg-primary text-white">Primär kräftig</option>
+  <option value="bg-secondary text-white">Sekundär kräftig</option>
+  <option value="bg-success text-white">Erfolg kräftig</option>
+  <option value="bg-danger text-white">Gefahr kräftig</option>
+  </select>
+</form>
+</div>
+<div class="col-content">
+<form>
+  <label for="tablereact">Farbschema Zeilen:</label><br>
+  <select name="tablereact" id="tablereact">
+    <option value="">Keine Farbe</option>
+    <option value="table-striped">abwechselnd</option>
+    <option value="table-hover">Mouseover</option>
+      </select>
+</form>
+</div>
+<div class="col-content">
+<form>
+    <label for="tablewidth">Breite begrenzen:</label><br>
+    <select name="tablewidth" id="tablewidth">
+      <option value="100%">Volle Breite</option>
+      <option value="400px">400px</option>
+      <option value="600px">600px</option>
+      <option value="800px">800px</option>
+      <option value="1000px">1000px</option>
+      <option value="1200px">1200px</option>
+      <option value="1400px">1400px</option>     
+      <option value="1600px">1600px</option>    
+      <option value="1800px">1800px</option>    
+    </select>
+</form>
+</div>
+</div>
+<br>
+<hr>
+<h2>Schritt 4: Code erstellen und Vorschau prüfen</h2>
+      <button class="btn btn-primary" onclick="buildTable(this)">Code erstellen</button><br><br>
+    <h3>Vorschau</h3>
+      <p id="table"></p>
+<p id="table2"></p>
+      <br> <hr>
+      <h2>Schritt 5: HTML-Code kopieren und in die Vorlagen der Datenbankaktivität einfügen</h2>
+   <code >
+              <textarea cols="100" rows="50" id="table-code"></textarea>
+          </code>
+            <script>
+"use strict"
+let cols = 0;
+let rows = 0;
+let data = [];
+let tablecolor = "bg-default"
+let tablereact = ""
+let tablecolorsingle = "bg-default"
+let tablereactsingle = ""
+let tablewidthsingle = "100%"
+let tablewidth = "100%"
+let lastcol = "Aktion"
+let lastcolelements = "##edit## ##more## ##delete##"
+function createColumns(input) {
+    cols = input.value;
+    data = [];
+    let colsArray = [];
+    for (let i = 0; i < cols; i++) {
+        colsArray.push(`
+        <div class="column" id="col${i}">
+                <input class="header" placeholder="Feldname${i+1}" id="header${i}"type="string" onchange="updateColumnData(${i}, this)" />
+                <div class="col-content" id="col-content${i}"></div>
+            </div>
+        `);   
+        data.push({
+            header: "",
+            rows: []
+        });
+    };
+    let content = document.getElementById('contentE');
+    content.innerHTML = colsArray.join('') + "<div class='column'><input id='lastcol' type='string' value='" + lastcol + "'" + "type='text' class='header'><input id='lastcolelements' type='string' value='" + lastcolelements + "' type='text'></div>";
+};
+function createRows(input) {
+    let rows = 1;
+    for (let i = 0; i < cols; i++) {
+        let rowsArray = [];
+        for (let j = 0; j < rows; j++) {
+            rowsArray.push(`<input placeholder="Element${i+1}" id="column${i}-row${j}"type="string" onchange="updateRowData(${i}, ${j}, this)"/>`) 
+        };
+        let column = document.getElementById(`col-content${i}`);
+        column.innerHTML = rowsArray.join('');
+    };
+};
+function updateRowData(col, row, input) {
+    data[col].rows[row] = input.value;
+    // console.log(data)
+};
+function updateColumnData(col, input) {
+    data[col].header = input.value;
+    // console.log(data)
+};
+function buildTable() {
+    let header = [];
+    let headerE = [];
+    let rows = [];
+    let tablecolorsingle = document.getElementById("tablecolorsingle").value;
+    let tablereactsingle = document.getElementById("tablereactsingle").value;
+    let tablewidthsingle = document.getElementById("tablewidthsingle").value;
+    // builds table header
+    for (let i = 1; i < data.length; i++) {
+        let th = `<th>${data[i].header}</th>`
+        header.push(th)
+        };
+   // builds table header
+    for (let i = 1; i < data.length; i++) {
+        let th = `<tr><th class="${tablecolorsingle}">${data[i].header}</th><td>${data[i].rows}</td></tr>`
+        headerE.push(th)
+          };
+    for (let i = 1; i < data.length; i++) {
+        let th = `<td>${data[i].rows}</td>`
+        rows.push(th)
+          };
+  let headerStr = header.toString()
+  let headerEStr = headerE.toString()
+  let rowsStr = rows.toString()
+  let tablecolor = document.getElementById("tablecolor").value;
+  let tablereact = document.getElementById("tablereact").value;
+  let tablewidth = document.getElementById("tablewidth").value;
+  let lastcol = document.getElementById("lastcol").value;
+  let headerlist = document.getElementById("headerlist").value;
+  let headersingle = document.getElementById("headersingle").value;
+  let lastcolelements = document.getElementById("lastcolelements").value;
+    rowsStr = rowsStr.replace(/[0-9][-]/gi, '')
+    let buildTable = `
+<h4>Einzelansicht</h4>
+<!-- Beginn Einzelansicht -->
+<table class="table ${tablereactsingle}" style="max-width: ${tablewidthsingle}">
+<caption style="caption-side: top">${headersingle}</caption>
+<tr><th class="${tablecolorsingle}">${data[0].header}</th><td>${data[0].rows}</td></tr>
+${headerEStr.replace(/,/g, '\n')}
+<tbody>
+</table>
+<!-- Ende Einzelansicht -->
+<h4>Listenansicht</h4>
+<!-- Beginn Kopfzeile -->
+<table class="table ${tablereact}" style="max-width: ${tablewidth}">
+<caption style="caption-side: top">${headerlist}</caption>
+<thead class="${tablecolor}">\n
+<tr style="white-space:nowrap">
+<th>${data[0].header}</th>
+${headerStr.replace(/,/g, '\n')}
+<th>${lastcol}</th></tr>\n
+</thead>
+<tbody>
+<!-- Ende Kopfzeile -->
+<!-- Beginn Wiederholter Eintrag -->
+<tr>
+<td><a href="##moreurl##">${data[0].rows[0]}</a></td>
+${rowsStr.replace(/,/g, '\n')}
+<td>${lastcolelements}</td>
+</tr>
+</tbody> 
+</table>`
+    let newTable = document.querySelector('#table');
+    newTable.innerHTML = buildTable;
+    let tableCode = document.querySelector('#table-code');
+    tableCode.innerHTML = `${buildTable.slice(0, -25)}</tr>\n<!-- Ende Wiederholter Eintrag -->\n\n<!-- Beginn Fußzeile -->\n</tbody>\n</table>\n<!-- Ende Fußzeile --> `;
+};
+</script>
+       
