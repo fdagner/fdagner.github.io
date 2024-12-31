@@ -4,7 +4,7 @@ title: "H5P-Idee: Erklär's anders (TABU)"
 date: 2024-12-31 12:00:00 +0100
 categories: [H5P, Unterricht]
 ---
-![Screenshot in Lumi](/assets/images/2024-12-31-tabu.png){: width="250" }
+![Bild erstellt mit recraft.ai: Person erklärt etwas (Symbolbild)](/assets/images/2024-12-31-tabu.png){: width="250" }
 
 **Das Spiel TABU ist ein klassisches Wortspiel, das den kreativen Einsatz von Sprache fördert und die Fähigkeit zur Kommunikation unter Druck herausfordert. In dem Spiel müssen Spieler Begriffe erklären, ohne bestimmte, sogenannte „verbotene“ Wörter zu verwenden. Diese Einschränkungen machen das Erklären von Begriffen besonders herausfordernd, da die Spieler sich auf ihre Sprachgewandtheit und Kreativität verlassen müssen. Ziel des Spiels ist es, dass das eigene Team möglichst viele Begriffe innerhalb eines begrenzten Zeitrahmens korrekt errät.** 
 
