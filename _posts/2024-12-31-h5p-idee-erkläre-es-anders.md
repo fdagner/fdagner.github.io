@@ -27,7 +27,7 @@ Die Erstellung erfolgt analog zu der Vorgehensweise, die ich für die [H5P-Zeitl
 
 Interessant ist in diesem Zusammenhang, dass die Grafik und die Lizenzangaben in der JSON übernommen werden und die Grafik nur einmal hochgeladen werden muss, da alle Karten auf die selbe Grafik verweisen. Die H5P wird dadurch schlanker als bei manueller Erstellung in Lumi.
 
-Als weiteres Material benötigt man einen Zeitgeber und eine akkustische Glocke, Tröte oder dergleichen. Dann kann der Spielspaß schon losgehen.
+Als weiteres Material benötigt man einen Zeitgeber und eine Glocke, Tröte oder dergleichen. Dann kann der Spielspaß schon losgehen.
 
 [![H5P](/assets/images/2024-12-31-tabu-h5p.png)](https://apps.zum.de/apps/37898){: style="width: 500px;display: block; margin: 0 auto"}
 
