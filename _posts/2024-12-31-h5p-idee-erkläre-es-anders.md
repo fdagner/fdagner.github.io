@@ -2,7 +2,7 @@
 layout: post
 title: "H5P-Idee: Erklär's anders (TABU)"
 date: 2024-12-31 12:00:00 +0100
-categories: [H5P, Unterricht]
+categories: [H5P, Unterricht, KI]
 ---
 ![Bild erstellt mit recraft.ai: Person erklärt etwas (Symbolbild)](/assets/images/2024-12-31-tabu.png){: width="250" }
 
