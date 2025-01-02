@@ -5,7 +5,7 @@ date: 2025-01-01 15:00:00 +0100
 categories: [Unterricht]
 ---
 
-Ergänzend zur [H5P-Idee: Erklär's anders (TABU)](/h5p-idee-erkläre-es-anders/) benötigt man für dieses und ähnliche Spiele eine Punkteanzeige mit den Teams in der Übersicht und einen Zeitgeber. Das erledigt nun [Teampunkte](https://oer.fdagner.de/teampunkte/).
+Ergänzend zur [H5P-Idee: Erklär's anders (TABU)](/2024/12/31/h5p-idee-erkläre-es-anders/) benötigt man für dieses und ähnliche Spiele eine Punkteanzeige mit den Teams in der Übersicht und einen Zeitgeber. Das erledigt nun [Teampunkte](https://oer.fdagner.de/teampunkte/).
 
 [![Bild erstellt mit recraft.ai: Person erklärt etwas (Symbolbild)](/assets/images/2025-01-01-teampunkte.png){: style="width: 100%;max-width: 700px;display: block; margin: 0 auto"}](https://oer.fdagner.de/teampunkte/)
 
