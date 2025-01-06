@@ -13,6 +13,10 @@
     flex-direction: row;
     gap: 10px;
 }
+.screen-container {
+    width: 95vw;
+    margin-top: 12px;
+}
 
 /* Typography Styles */
 h1 {
@@ -52,6 +56,14 @@ h1 {
     justify-content: flex-end;
     align-items: baseline;
     width: 90%;
+}
+
+.ausgabe-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Slider Input and Value */
@@ -213,7 +225,7 @@ input[type="file"] {
     background-color: #fff;
     color: #333;
     margin: 10px 0;
-    width: 180px;
+    width: 220px;
     cursor: pointer;
 }
 
@@ -283,6 +295,11 @@ input[type="file"] {
         margin-top: 22px;
         margin-bottom: 12px;
     }
+
+    .screen-container {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 700px) {
@@ -310,14 +327,6 @@ input[type="file"] {
 
     #icon-container {
         display: none;
-    }
-
-    #spiderChart {
-        position: absolute;
-        left: 0;
-        right: 0;
-        page-break-before: auto;
-        margin-top: 20px;
     }
 
     p,
@@ -358,7 +367,7 @@ input[type="file"] {
     }
 
     #chart-container {
-        margin-left: 0;
-        min-width: 100%;
+        max-width: 100%;
     }
+
 }
