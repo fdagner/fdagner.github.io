@@ -172,14 +172,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 },
                 stroke: { width: 2 },
-                markers: { size: 6, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 1 },
+                markers: { size: 6, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 2 },
                 fill: { colors: ['#33b2df'], opacity: 0.2 },
                 title: { text: '', align: 'center' },
                 responsive: [{
                     breakpoint: 768,
                     stroke: { width: 1 },
                     options: {
-                        markers: { size: 3, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 2 },
+                        markers: { size: 3, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 1 },
                         xaxis: {
                             labels: {
                                 style: {
