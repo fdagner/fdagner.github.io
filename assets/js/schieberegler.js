@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const chartOptions = {
                 series: [{ name: 'Rating', data: initialData }],
                 chart: {
-                    height: 650, width: "100%", type: 'radar'
+                    height: 750, width: "100%", type: 'radar'
                 },
                 xaxis: {
                     categories: sliderNames,
@@ -178,6 +178,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 responsive: [{
                     breakpoint: 768,
                     options: {
+                        chart: {
+                            height: 600, width: "100%", type: 'radar'
+                        },
                         xaxis: {
                             labels: {
                                 style: {
