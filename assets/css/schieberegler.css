@@ -183,7 +183,7 @@ input[type="file"] {
 #chart-container {
     position: relative;
     padding: 10px;
-    min-width: 900px;
+    min-width: 800px;
     page-break-before: always;
 }
 
@@ -256,6 +256,12 @@ input[type="file"] {
     .slider {
         flex: 0 1 auto;
     }
+}
+
+@media (max-width: 768px) {
+#chart-container {
+    margin: 0 auto;
+}
 }
 
 /* Print Styles */
