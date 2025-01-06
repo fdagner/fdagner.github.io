@@ -54,7 +54,9 @@ header_pages:
       - title: CSV-Moodle-Konverter
         url: /csv-moodle-konverter/ 
       - title: Moodle-Datenbank-Aktivität-Generator
-        url: /moodle-datenbank-generator/  
+        url: /moodle-datenbank-generator/
+      - title: Didaktischer Schieberegler
+        url: /didaktischer-schieberegler/    
 
 # Exclude from processing.
 # The following items will not be processed, by default.
