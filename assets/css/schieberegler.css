@@ -266,12 +266,18 @@ input[type="file"] {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 #chart-container {
-    min-width: 650px;
-    margin: 0 auto;
+    min-width: 700px;
 }
 }
+
+@media (max-width: 577px) {
+    #chart-container {
+        margin: 0 auto;
+    }
+    }
+    
 
 /* Print Styles */
 @media print {
