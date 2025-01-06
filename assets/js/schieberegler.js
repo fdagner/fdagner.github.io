@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     breakpoint: 768,
                     options: {
                         chart: {
-                            height: 600, width: "100%", type: 'radar'
+                            height: 500, type: 'radar'
                         },
                         xaxis: {
                             labels: {
