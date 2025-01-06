@@ -189,14 +189,6 @@ input[type="file"] {
     border: dashed 1px #ccc;
 }
 
-.apexcharts-xaxis-label {
-    white-space: break-spaces !important;
-    /* Erlaubt Umbrüche bei Leerzeichen */
-    text-align: center;
-    /* Optional: Zentrieren der Labels */
-    width: 60px;
-}
-
 .apexcharts-menu-icon {
     color: #000;
     background-color: #f5f5f5;
