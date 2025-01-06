@@ -184,7 +184,7 @@ input[type="file"] {
     position: relative;
     padding: 10px;
     width: 100%;
-    min-width: 768px;
+    min-width: 850px;
     page-break-before: always;
     border: dashed 1px #ccc;
 }
@@ -269,6 +269,7 @@ input[type="file"] {
 @media (max-width: 768px) {
 #chart-container {
     margin: 0 auto;
+    min-width: 768px;
 }
 }
 

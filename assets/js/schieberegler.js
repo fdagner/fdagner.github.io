@@ -181,7 +181,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         xaxis: {
                             labels: {
                                 style: {
-                                    fontSize: '12px',
+                                    fontSize: '11px',
+                                },
+                                plotOptions: {
+                                    radar: {
+                                        size: 70,
+                                       }
                                 },
                             }
                         },
