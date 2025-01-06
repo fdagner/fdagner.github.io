@@ -184,7 +184,7 @@ input[type="file"] {
     position: relative;
     padding: 10px;
     width: 100%;
-    min-width: 850px;
+    min-width: 950px;
     page-break-before: always;
     border: dashed 1px #ccc;
 }
