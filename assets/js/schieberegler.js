@@ -203,8 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Event: Add new slider
     addSliderBtn.addEventListener('click', function () {
         const currentSliderCount = slidersContainer.children.length;
-        if (currentSliderCount >= 10) {
-            alert("Sie können nur bis zu 10 Regler hinzufügen.");
+        if (currentSliderCount >= 15) {
+            alert("Sie können nur bis zu 15 Regler hinzufügen.");
         } else {
             createSlider("", 5);
         }
