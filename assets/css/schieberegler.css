@@ -1,0 +1,309 @@
+/* General Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#button-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Typography Styles */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.slider-label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Slider Container and Layout */
+.sliders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.slider-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.name-delete-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    width: 90%;
+}
+
+/* Slider Input and Value */
+.slider {
+    min-width: 220px;
+}
+
+.slider-value {
+    min-width: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider-name {
+    min-width: 100%;
+    margin-bottom: 12px;
+    padding: 5px;
+    font-size: 1rem;
+    max-width: 200px;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.slider-left,
+.slider-right {
+    min-width: 180px;
+    border: 1px solid #f3f3f3;
+    text-align: center;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    margin: 10px 0;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#addSliderBtn {
+    background-color: #28a745;
+}
+
+#addSliderBtn:hover {
+    background-color: #218838;
+}
+
+#createRadarBtn {
+    background-color: #007BFF;
+    margin-bottom: 20px;
+}
+
+#createRadarBtn:hover {
+    background-color: #0056b3;
+}
+
+#clearBtn,
+.delete-slider-btn {
+    background-color: #FF4C4C;
+}
+
+.delete-slider-btn {
+    padding: 2px 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 12px;
+}
+
+#clearBtn:hover,
+.delete-slider-btn:hover {
+    background-color: #cc0000;
+}
+
+#saveButton {
+    background-color: #FF8C00;
+    margin-top: 10px;
+}
+
+#saveButton:hover {
+    background-color: #e07b00;
+}
+
+#fileInput {
+    margin-top: 2px;
+}
+
+/* File Input and Error Message */
+input[type="file"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#errorMessage {
+    color: red;
+    font-size: 1.2rem;
+    display: none;
+}
+
+/* Print Button */
+#printButton {
+    padding: 10px 20px;
+    background-color: #33b2df;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#printButtonDiv {
+    margin: auto 0;
+    text-align: center;
+}
+
+/* Chart Container */
+#chart-container {
+    position: relative;
+    padding: 10px;
+    min-width: 900px;
+    page-break-before: always;
+}
+
+.apexcharts-menu-icon {
+    color: #000;
+    background-color: #f5f5f5;
+    padding: 14px;
+    border: 2px solid #ccc;
+    transform: scale(0.9) !important;
+}
+
+/* Dropdown Menu */
+#dropdown-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.select-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    margin: 10px 0;
+    width: 180px;
+    cursor: pointer;
+}
+
+.select-dropdown:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.select-dropdown option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.select-dropdown option:hover {
+    background-color: #f1f1f1;
+}
+
+.select-dropdown:hover {
+    border-color: #0056b3;
+}
+
+.slider-lr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Slider Layout Adjustments */
+.slider-left,
+.slider-right,
+.slider {
+    flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+    .slider-left,
+    .slider-right,
+    .slider {
+        flex: 0 1 auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .slider-name,
+    .slider-left,
+    .slider-right,
+    .slider,
+    #spiderChart {
+        visibility: visible;
+    }
+
+    #spiderChart {
+        position: absolute;
+        left: 0;
+        right: 0;
+        page-break-before: auto;
+        margin-top: 20px;
+    }
+
+    p,
+    ul,
+    li button,
+    #addSliderBtn,
+    #clearBtn,
+    #saveButton,
+    #createRadarBtn,
+    .delete-slider-btn,
+    #printButtonDiv,
+    .apexcharts-menu-icon,
+    #fileInput,
+    h3,
+    #dropdown-container,
+    #jsonFileSelect,
+    #loadJsonButton,
+    hr,
+    nav,
+    header,
+    label {
+        display: none;
+    }
+
+    .sliders-container {
+        display: block;
+    }
+
+    #button-container {
+        display: none;
+    }
+}

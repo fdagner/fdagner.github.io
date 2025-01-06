@@ -1,0 +1,65 @@
+{
+    "sliders": [
+      {
+        "name": "Klarheit und Strukturiertheit",
+        "value": 5,
+        "leftText": "Unklar",
+        "rightText": "Klar"
+      },
+      {
+        "name": "Lernzeit",
+        "value": 5,
+        "leftText": "Ineffizient",
+        "rightText": "Effizient"
+      },
+      {
+        "name": "Methodenvielfalt",
+        "value": 5,
+        "leftText": "Eintönig",
+        "rightText": "Vielfältig"
+      },
+      {
+        "name": "Lernklima",
+        "value": 5,
+        "leftText": "Hemmend",
+        "rightText": "Lernförderlich"
+      },
+      {
+        "name": "Schülerorientierung",
+        "value": 5,
+        "leftText": "Gleichgültig",
+        "rightText": "Fokussiert"
+      },
+      {
+        "name": "Zielorientierung",
+        "value": 5,
+        "leftText": "Unklar",
+        "rightText": "Klar"
+      },
+      {
+        "name": "Schüleraktivierung",
+        "value": 5,
+        "leftText": "Passiv",
+        "rightText": "Aktiv"
+      },
+      {
+        "name": "Leistungserwartungen",
+        "value": 5,
+        "leftText": "Unklar",
+        "rightText": "Transparent"
+      },
+      {
+        "name": "Individuelle Förderung",
+        "value": 5,
+        "leftText": "Keine",
+        "rightText": "Gezielt"
+      },
+      {
+        "name": "Sinnstiftendes Lernen",
+        "value": 5,
+        "leftText": "Unwichtig",
+        "rightText": "Bedeutsam"
+      }
+    ]
+  }
+  

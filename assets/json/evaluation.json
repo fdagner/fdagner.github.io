@@ -1,0 +1,40 @@
+{
+  "sliders": [
+    {
+      "name": "Klassenführung",
+      "value": 5,
+      "leftText": "Handlungsbedarf",
+      "rightText": "Exzellente Praxis"
+    },
+    {
+      "name": "Nachvollziehbarkeit des Lernangebots",
+      "value": 5,
+      "leftText": "Handlungsbedarf",
+      "rightText": "Exzellente Praxis"
+    },
+    {
+      "name": "Variation der Lehr- und Lernmethoden",
+      "value": 5,
+      "leftText": "Handlungsbedarf",
+      "rightText": "Exzellente Praxis"
+    },
+    {
+      "name": "Schülerorientierung",
+      "value": 5,
+      "leftText": "Handlungsbedarf",
+      "rightText": "Exzellente Praxis"
+    },
+    {
+      "name": "Berücksichtigung der Lernvoraussetzungen",
+      "value": 5,
+      "leftText": "Handlungsbedarf",
+      "rightText": "Exzellente Praxis"
+    },
+    {
+      "name": "Nachhaltiges Lernen",
+      "value": 5,
+      "leftText": "Handlungsbedarf",
+      "rightText": "Exzellente Praxis"
+    }
+  ]
+}

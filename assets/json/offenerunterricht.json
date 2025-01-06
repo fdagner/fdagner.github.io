@@ -1,0 +1,34 @@
+{
+    "sliders": [
+        {
+            "name": "Selbstbestimmung ",
+            "value": 5,
+            "leftText": "ohne",
+            "rightText": "vollständig"
+        },
+        {
+            "name": "Differenzierung",
+            "value": 5,
+            "leftText": "keine",
+            "rightText": "systematisch"
+        },
+        {
+            "name": "Lerntempo",
+            "value": 5,
+            "leftText": "synchron ",
+            "rightText": "individuell"
+        },
+        {
+            "name": "Feedback",
+            "value": 5,
+            "leftText": "summativ",
+            "rightText": "formativ"
+        },
+        {
+            "name": "Sozialform",
+            "value": 5,
+            "leftText": "bestimmt",
+            "rightText": "frei wählbar"
+        }
+    ]
+}

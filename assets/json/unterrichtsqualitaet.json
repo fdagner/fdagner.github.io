@@ -1,0 +1,23 @@
+{
+    "sliders": [
+      {
+        "name": "Kognitive Aktivierung",
+        "value": 5,
+        "leftText": "",
+        "rightText": ""
+      },
+      {
+        "name": "Konstruktive Unterstützung",
+        "value": 5,
+        "leftText": "",
+        "rightText": ""
+      },
+      {
+        "name": "Strukturierte Klassenführung",
+        "value": 5,
+        "leftText": "",
+        "rightText": ""
+      }
+    ]
+  }
+  

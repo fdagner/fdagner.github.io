@@ -1,0 +1,35 @@
+{
+    "sliders": [
+      {
+        "name": "Zutrauen & Zumutung",
+        "value": 5,
+        "leftText": "geringe Erwartungen",
+        "rightText": "hohe Erwartungen"
+      },
+      {
+        "name": "Ausschöpfen des Potenzials",
+        "value": 5,
+        "leftText": "gering",
+        "rightText": "vollständig"
+      },
+      {
+        "name": "Kollegialer Austausch",
+        "value": 5,
+        "leftText": "wenig",
+        "rightText": "umfassend"
+      },
+      {
+        "name": "Klassenführung",
+        "value": 5,
+        "leftText": "unorganisiert und ineffektiv",
+        "rightText": "strukturiert und effizient"
+      },
+      {
+        "name": "Lernklima",
+        "value": 5,
+        "leftText": "kühl und distanziert",
+        "rightText": "respektvoll und fürsorglich"
+      }
+    ]
+  }
+  
