@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 xaxis: {
                     categories: sliderNames,
-                    labels: { show: true, style: { fontSize: '14px', colors: Array(11).fill('#000') } }
+                    labels: { show: true, style: { fontSize: '14px', colors: Array(33).fill('#000') } }
                 },
                 yaxis: { max: 10, tickAmount: 5 },
                 plotOptions: {
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
     addSliderBtn.addEventListener('click', function () {
         const currentSliderCount = slidersContainer.children.length;
         if (currentSliderCount >= 10) {
-            alert("You can add up to 10 sliders.");
+            alert("Sie können nur bis zu 10 Regler hinzufügen.");
         } else {
             createSlider("", 5);
         }
