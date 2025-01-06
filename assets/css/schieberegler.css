@@ -355,4 +355,13 @@ input[type="file"] {
     #button-container {
         display: none;
     }
+
+ 
+        .slider-left,
+        .slider-right,
+        .slider {
+            flex: none;
+        }
+
+    
 }
