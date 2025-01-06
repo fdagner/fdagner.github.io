@@ -183,9 +183,16 @@ input[type="file"] {
 #chart-container {
     position: relative;
     padding: 10px;
-    min-width: 800px;
+    width: 100%;
+    min-width: 768px;
     page-break-before: always;
     border: dashed 1px #ccc;
+}
+
+.apexcharts-xaxis-label {
+    white-space: break-spaces !important; /* Erlaubt Umbrüche bei Leerzeichen */
+    text-align: center;                   /* Optional: Zentrieren der Labels */
+    width: 60px;   
 }
 
 .apexcharts-menu-icon {

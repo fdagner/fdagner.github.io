@@ -157,10 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else {
             const chartOptions = {
-                responsive: [{
-                    breakpoint: undefined,
-                    options: {},
-                }],
                 series: [{ name: 'Rating', data: initialData }],
                 chart: {
                     height: 650, width: "100%", type: 'radar'
@@ -172,14 +168,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 yaxis: { max: 10, tickAmount: 5 },
                 plotOptions: {
                     radar: {
-                        size: 220,
                         polygons: { strokeColors: '#e9e9e9', fill: { colors: ['#e9e9e9', '#fff'] } }
                     }
                 },
                 stroke: { width: 2 },
                 markers: { size: 6, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 2 },
                 fill: { colors: ['#33b2df'], opacity: 0.2 },
-                title: { text: '', align: 'center' }
+                title: { text: '', align: 'center' },
+                responsive: [{
+                    breakpoint: 768,
+                    options: {
+                        xaxis: {
+                            labels: {
+                                style: {
+                                    fontSize: '12px',
+                                },
+                            }
+                        },
+
+                    }
+                }]
             };
             chart = new ApexCharts(chartContainer, chartOptions);
             chart.render();
