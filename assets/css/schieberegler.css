@@ -277,7 +277,7 @@ input[type="file"] {
     }
 }
 
-@media (max-width: 650px) and (orientation: portrait) {
+@media (max-width: 667px) and (orientation: portrait) {
     #icon-container {
         display: flex;
         gap: 14px;
@@ -285,12 +285,12 @@ input[type="file"] {
         justify-content: center;
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-top: 12px;
+        margin-top: 22px;
         margin-bottom: 12px;
       }
     }
 
-@media (max-width: 650px) {
+@media (max-width: 667px) {
 #chart-container {
     min-width: 700px;
 }
