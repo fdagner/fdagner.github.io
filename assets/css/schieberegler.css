@@ -185,6 +185,7 @@ input[type="file"] {
     padding: 10px;
     min-width: 800px;
     page-break-before: always;
+    border: dashed 1px #ccc;
 }
 
 .apexcharts-menu-icon {
