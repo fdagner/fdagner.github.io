@@ -187,8 +187,12 @@ input[type="file"] {
 }
 
 #printButtonDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: auto 0;
     text-align: center;
+    gap: 4px;
 }
 
 /* Chart Container */
@@ -311,6 +315,10 @@ input[type="file"] {
 @media (max-width: 577px) and (orientation: portrait) {
     #chart-container {
         margin: 0 auto;
+    }
+    #printButtonDiv {
+        display: flex;
+        flex-direction: column;
     }
 }
 
