@@ -190,9 +190,11 @@ input[type="file"] {
 }
 
 .apexcharts-xaxis-label {
-    white-space: break-spaces !important; /* Erlaubt Umbrüche bei Leerzeichen */
-    text-align: center;                   /* Optional: Zentrieren der Labels */
-    width: 60px;   
+    white-space: break-spaces !important;
+    /* Erlaubt Umbrüche bei Leerzeichen */
+    text-align: center;
+    /* Optional: Zentrieren der Labels */
+    width: 60px;
 }
 
 .apexcharts-menu-icon {
@@ -262,7 +264,7 @@ input[type="file"] {
 }
 
 #icon-container svg {
-    width: 20px;    
+    width: 20px;
 }
 
 #phone2 {
@@ -270,6 +272,7 @@ input[type="file"] {
 }
 
 @media (min-width: 768px) {
+
     .slider-left,
     .slider-right,
     .slider {
@@ -287,13 +290,13 @@ input[type="file"] {
         flex-wrap: nowrap;
         margin-top: 22px;
         margin-bottom: 12px;
-      }
     }
+}
 
 @media (max-width: 700px) {
-#chart-container {
-    min-width: 700px;
-}
+    #chart-container {
+        min-width: 700px;
+    }
 }
 
 @media (max-width: 577px) and (orientation: portrait) {
@@ -356,12 +359,14 @@ input[type="file"] {
         display: none;
     }
 
- 
-        .slider-left,
-        .slider-right,
-        .slider {
-            flex: none;
-        }
+    .slider-left,
+    .slider-right,
+    .slider {
+        flex: none;
+    }
 
-    
+    #chart-container {
+        margin-left: 0;
+        min-width: 100%;
+    }
 }
