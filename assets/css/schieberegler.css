@@ -250,12 +250,23 @@ input[type="file"] {
     justify-content: center;
 }
 
+#icon-container {
+    display: none;
+}
 
 /* Slider Layout Adjustments */
 .slider-left,
 .slider-right,
 .slider {
     flex: 1 1 100%;
+}
+
+#icon-container svg {
+    width: 20px;    
+}
+
+#phone2 {
+    transform: rotate(90deg);
 }
 
 @media (min-width: 768px) {
@@ -266,18 +277,29 @@ input[type="file"] {
     }
 }
 
+@media (max-width: 650px) and (orientation: portrait) {
+    #icon-container {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 22px;
+      }
+    }
+
 @media (max-width: 650px) {
 #chart-container {
     min-width: 700px;
 }
 }
 
-@media (max-width: 577px) {
+@media (max-width: 577px) and (orientation: portrait) {
     #chart-container {
         margin: 0 auto;
     }
-    }
-    
+}
 
 /* Print Styles */
 @media print {
@@ -288,6 +310,10 @@ input[type="file"] {
     .slider,
     #spiderChart {
         visibility: visible;
+    }
+
+    #icon-container {
+        display: none;
     }
 
     #spiderChart {
@@ -316,7 +342,8 @@ input[type="file"] {
     hr,
     nav,
     header,
-    label {
+    label,
+    #icon-container {
         display: none;
     }
 
