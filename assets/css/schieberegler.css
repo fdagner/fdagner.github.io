@@ -290,7 +290,7 @@ input[type="file"] {
       }
     }
 
-@media (max-width: 667px) {
+@media (max-width: 700px) {
 #chart-container {
     min-width: 700px;
 }
