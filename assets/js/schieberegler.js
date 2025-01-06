@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const chartOptions = {
                 series: [{ name: 'Rating', data: initialData }],
                 chart: {
-                    height: 750, width: "100%", type: 'radar'
+                    width: "100%", type: 'radar'
                 },
                 xaxis: {
                     categories: sliderNames,
@@ -172,15 +172,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 },
                 stroke: { width: 2 },
-                markers: { size: 6, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 2 },
+                markers: { size: 6, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 1 },
                 fill: { colors: ['#33b2df'], opacity: 0.2 },
                 title: { text: '', align: 'center' },
                 responsive: [{
                     breakpoint: 768,
+                    stroke: { width: 1 },
                     options: {
-                        chart: {
-                            height: 500, type: 'radar'
-                        },
+                        markers: { size: 3, colors: ['#ffffff'], strokeColors: '#33b2df', strokeWidth: 2 },
                         xaxis: {
                             labels: {
                                 style: {

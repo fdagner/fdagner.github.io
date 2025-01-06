@@ -184,7 +184,7 @@ input[type="file"] {
     position: relative;
     padding: 10px;
     width: 100%;
-    min-width: 950px;
+    min-width: 900px;
     page-break-before: always;
     border: dashed 1px #ccc;
 }
@@ -268,10 +268,15 @@ input[type="file"] {
 
 @media (max-width: 768px) {
 #chart-container {
-    margin: 0 auto;
-    min-width: 650px;
+    min-width: 700px;
 }
 }
+
+@media (max-width: 512px) {
+    #chart-container {
+        min-width: 650px;
+    }
+    }
 
 /* Print Styles */
 @media print {

@@ -7,13 +7,13 @@
       "rightText": "Exzellente Praxis"
     },
     {
-      "name": "Nachvollziehbarkeit des Lernangebots",
+      "name": "Lernangebot",
       "value": 5,
       "leftText": "Handlungsbedarf",
       "rightText": "Exzellente Praxis"
     },
     {
-      "name": "Variation der Lehr- und Lernmethoden",
+      "name": "Variation",
       "value": 5,
       "leftText": "Handlungsbedarf",
       "rightText": "Exzellente Praxis"
@@ -25,7 +25,7 @@
       "rightText": "Exzellente Praxis"
     },
     {
-      "name": "Berücksichtigung der Lernvoraussetzungen",
+      "name": "Lernvoraussetzungen",
       "value": 5,
       "leftText": "Handlungsbedarf",
       "rightText": "Exzellente Praxis"
