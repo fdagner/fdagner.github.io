@@ -310,18 +310,18 @@ input[type="file"] {
     #chart-container {
         min-width: 700px;
     }
-}
-
-@media (max-width: 577px) and (orientation: portrait) {
-    #chart-container {
-        margin: 0 auto;
-    }
     #printButtonDiv {
         display: flex;
         flex-direction: column;
     }
 }
 
+@media (max-width: 577px) and (orientation: portrait) {
+    #chart-container {
+        margin: 0 auto;
+    }
+}
+ 
 /* Print Styles */
 @media print {
 
