@@ -43,7 +43,7 @@ jekyll-archives:
     category: '/category/:name/'
 
 header_pages:
-  - title: OER
+  - title: "OER"
     children:
       - title: BwR-Helfer
         url: https://oer.fdagner.de/bwr/
@@ -51,12 +51,18 @@ header_pages:
         url: https://oer.fdagner.de/klimadiagramme/
       - title: Farbmodelle mischen
         url: https://oer.fdagner.de/color-models/
+  - title: "Moodle"
+    children:
       - title: CSV-Moodle-Konverter
-        url: /csv-moodle-konverter/ 
+        url: /csv-moodle-konverter/
       - title: Moodle-Datenbank-Aktivität-Generator
         url: /moodle-datenbank-generator/
+  - title: "Anwendungen"
+    children:
       - title: Didaktischer Schieberegler
-        url: /didaktischer-schieberegler/    
+        url: /didaktischer-schieberegler/
+      - title: Teampunkte
+        url: /teampunkte/ 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
