@@ -12,7 +12,7 @@ Vor einem Leistungsnachweis im Fach BwR wird häufig eine Fragerunde abgehalten,
 
 1. Zu allgemeine oder unspezifische Fragen: Viele Schüler stellen Fragen wie „Könnten Sie noch einmal zeigen...?“ oder „Was muss ich wissen?“ Diese Fragen sind zu weit gefasst und helfen nicht dabei, konkrete Punkte zu klären. Sie vermitteln keine Vorstellung davon, was die Schüler tatsächlich nicht verstehen oder wo sie Schwierigkeiten haben..
 
-2. Mangelnde Auseinandersetzung mit dem Inhalten: Eine gute Frage setzt voraus, dass sich der Schüler zuvor mit dem Thema beschäftigt hat. Doch in vielen Fällen merkt man, dass die Fragen eher eine oberflächliche Beschäftigung mit dem Thema widerspiegeln. Anstatt gezielt nach bestimmten Aspekten zu fragen, hoffen die Schüler oft auf eine einfache Antwort, die ihnen das gesamte Thema erklärt.
+2. Mangelnde Auseinandersetzung mit den Inhalten: Eine gute Frage setzt voraus, dass sich der Schüler zuvor mit dem Thema beschäftigt hat. Doch in vielen Fällen merkt man, dass die Fragen eher eine oberflächliche Beschäftigung mit dem Thema widerspiegeln. Anstatt gezielt nach bestimmten Aspekten zu fragen, hoffen die Schüler oft auf eine einfache Antwort, die ihnen das gesamte Thema erklärt.
 
 3. Unklare oder fehlerhafte Formulierung: Eine präzise Frage erfordert eine klare und korrekte Formulierung. Häufig jedoch sind die Fragen der Schüler ungenau oder schlecht strukturiert, was es schwer macht, den Kern der Frage zu erfassen. Oft fehlt es an der richtigen Wortwahl oder an Fachbegriffen.
 
