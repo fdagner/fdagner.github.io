@@ -32,7 +32,7 @@ plugins:
 - jekyll-feed
 - jekyll-archives
 - jekyll-paginate
-paginate: 5 # Anzahl der Beiträge pro Seite
+paginate: 10 # Anzahl der Beiträge pro Seite
 paginate_path: "/page:num/"
 
 jekyll-archives:
