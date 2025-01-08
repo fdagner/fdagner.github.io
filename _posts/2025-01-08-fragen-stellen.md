@@ -77,7 +77,7 @@ Um Schülern eine strukturierte Herangehensweise an das Formulieren von guten Fr
 | **Ganzheitlich**     | Die Frage erfordert Verständnis der Unterschiede und könnte auf die Bedeutung für die Buchführung überleiten.       |  ⚠️ Teilweise  |
 
 ### Grenzen des Konzepts
- Strikte Kategorien könnten Schüler im Denken einschränken und ihre Spontanität beim Fragen hemmen. Fehler und unstrukturierte Fragen können oft zu guten Lernmomenten führen. Das Konzept geht auch nicht auf individuelle Bedürfnisse ein. Es ist möglicherweie nicht auf andere Fachbereiche übertragbar. Jedoch ist es wichtig zu betonen, dass das Konzept für die Vorbereitung auf Leistungsnachweise im Fach BwR konzipiert wurde und nicht ohne weiteres auf alle anderen Unterrichtsphasen übertragen werden kann. In anderen Kontexten, wie etwa im explorativen und kreativen Lernen, ist ein flexiblerer Umgang mit Fragen oft hilfreicher und förderlicher für den Lernprozess.
+ Strikte Kategorien könnten Schüler im Denken einschränken und ihre Spontanietät beim Fragen hemmen. Fehler und unstrukturierte Fragen können oft zu guten Lernmomenten führen. Das Konzept geht auch nicht auf individuelle Bedürfnisse ein. Es ist möglicherweie nicht auf andere Fachbereiche übertragbar. Jedoch ist es wichtig zu betonen, dass das Konzept für die Vorbereitung auf Leistungsnachweise im Fach BwR konzipiert wurde und nicht ohne weiteres auf alle anderen Unterrichtsphasen übertragen werden kann. In anderen Kontexten, wie etwa im explorativen und kreativen Lernen, ist ein flexiblerer Umgang mit Fragen oft hilfreicher und förderlicher für den Lernprozess.
 
 ### Umsetzung
 
