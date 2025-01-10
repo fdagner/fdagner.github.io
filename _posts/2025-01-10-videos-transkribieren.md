@@ -24,7 +24,7 @@ In [Lumi H5P Desktop](https://lumi.education/de/lumi-h5p-desktop-editor/) wählt
 
 Ein Beispiel kann auf [ZUMApps](https://apps.zum.de/apps/38165) angesehen werden.
 
-><i>ZUMApps akzeptiert (derzeit?) keine VTT-Dateien. Eine Lösung war, die Dateien vor dem Upload in .txt-Dateien umzubenennen.</i>
+<i>Hinweis: ZUMApps akzeptiert (derzeit?) keine VTT-Dateien. Eine Lösung war, die Dateien vor dem Upload in .txt-Dateien umzubenennen.</i>
 
 ### Fazit
 Die Möglichkeit, Transkripte in verschiedenen Sprachen bereitzustellen, fördert die Integration und Inklusion im Bildungsbereich. Besonders die Integration von interaktiven Elementen in H5P stellt sicher, dass der Lernprozess sowohl ansprechend als auch barrierefrei gestaltet wird. 
