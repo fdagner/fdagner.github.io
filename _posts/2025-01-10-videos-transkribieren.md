@@ -17,7 +17,7 @@ Zunächst wird [Buzz](https://chidiwilliams.github.io/buzz/docs) auf dem Compute
 Sobald die Transkription abgeschlossen ist, kann man mit einem Doppelklick auf den aktuellen Prozess das Transkript als VTT-Datei (Video Text Track) exportieren. Dieses Format ist mit vielen Video-Playern kompatibel und ermöglicht eine einfache Synchronisation der Texte mit dem Video. Die VTT-Datei wird auf dem Computer gespeichert.
 
 ### Transkript übersetzen
-Die VTT-Datei kann mit einem Texteditor geöffnet und mithilfe einer Text-KI übersetzt werden, beispielsweise ins Englische. Mit einer Open-AI-API lässt sich die Übersetzung direkt in Buzz durchführen. Die übersetzte Datei wird anschließend in einer separaten Datei gespeichert, um sie später zu verwenden.
+Die VTT-Datei kann mit einem Texteditor geöffnet und mithilfe einer Text-KI übersetzt werden, beispielsweise ins Englische. Mit einer Open-AI-API lässt sich die Übersetzung direkt in Buzz durchführen. Die übersetzte Datei wird anschließend in einer separaten Datei gespeichert.
 
 ### Transkript in H5P importieren
 In [Lumi H5P Desktop](https://lumi.education/de/lumi-h5p-desktop-editor/) wählt man den Inhaltstyp „Interaktives Video“. Die zuvor exportierte VTT-Datei wird unter dem Klappmenü „Textspuren“ importiert. Es ist möglich, mehrere Textspuren hinzuzufügen und die Sprache jeder Spur zu spezifizieren. Ohne weitere Angaben ist die erste Textspur die Standardspur.
