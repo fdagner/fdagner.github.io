@@ -22,7 +22,9 @@ Die VTT-Datei kann mit einem Texteditor geöffnet und mithilfe einer Text-KI üb
 ### Transkript in H5P importieren
 In [Lumi H5P Desktop](https://lumi.education/de/lumi-h5p-desktop-editor/) wählt man den Inhaltstyp „Interaktives Video“. Die zuvor exportierte VTT-Datei wird unter dem Klappmenü „Textspuren“ importiert. Es ist möglich, mehrere Textspuren hinzuzufügen und die Sprache jeder Spur zu spezifizieren. Ohne weitere Angaben ist die erste Textspur die Standardspur.
 
-Ein Beispiel kann auf [ZUMApps](https://apps.zum.de/apps/38165) angesehen werden.
+Ein Beispiel kann auf [ZUMApps](https://apps.zum.de/apps/38165) angesehen werden:
+
+[![Bildschirmabdruck von ZUMApps](/assets/images/2025-01-10-h5p.png)](https://apps.zum.de/apps/38165){: style="width: 600px;display: block; margin: 0 auto"}
 
 <i>Hinweis: ZUMApps akzeptiert (derzeit?) keine VTT-Dateien. Eine Lösung war, die Dateien vor dem Upload in .txt-Dateien umzubenennen.</i>
 
