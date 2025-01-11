@@ -24,6 +24,7 @@ github_username: fdagner
 show_excerpts: true
 navigation: 2
 baseurl: ''
+lang: de
 permalink: /:year/:month/:day/:title/
 
 # Build settings
