@@ -9,7 +9,11 @@ categories: [H5P, KI]
 Die Integration von Transkripten in interaktive Formate wie H5P erhöht die Lernmotivation und sorgt für eine tiefere Auseinandersetzung mit dem Fachinhalt. Eine effektive Möglichkeit, um diese Transkriptionen zu erstellen, ist der Einsatz von <i>Buzz</i>.
 
 ### Buzz einrichten
-Zunächst wird [Buzz](https://chidiwilliams.github.io/buzz/docs) auf dem Computer installiert. In der Anwendung kann man eine Video-Datei über das Menü importieren oder einfach in die Arbeitsfläche ziehen. Nach dem Hochladen des Videos wählt man ein Modell aus. Ich habe das <i>Whisper Large-V3-Turbo-Modell</i> gewählt, da es eine hohe Genauigkeit bei der Spracherkennung bietet. Buzz beginnt nach dem Herunterladen des Modells automatisch mit der Transkription des Inhalts.
+Zunächst wird [Buzz](https://chidiwilliams.github.io/buzz/docs) auf dem Computer installiert. 
+
+>Tipp: Laden Sie Buzz nicht über den App Store von Apple herunter, da dort das Programm kostenpflichtig ist. Für Apple sowie auch für Linux und Windows gibt es im [GitHub-Repo](https://github.com/chidiwilliams/buzz) das Programm kostenlos zum Herunterladen.
+
+In der Anwendung kann man eine Video-Datei über das Menü importieren oder einfach in die Arbeitsfläche ziehen. Nach dem Hochladen des Videos wählt man ein Modell aus. Ich habe das <i>Whisper Large-V3-Turbo-Modell</i> gewählt, da es eine hohe Genauigkeit bei der Spracherkennung bietet. Buzz beginnt nach dem Herunterladen des Modells automatisch mit der Transkription des Inhalts.
 
 ![Bildschirmabdruck von Buzz](/assets/images/2025-01-10-buzz.png){: style="width: 600px;display: block; margin: 0 auto"}
 
