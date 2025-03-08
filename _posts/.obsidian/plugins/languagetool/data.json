@@ -1,0 +1,17 @@
+{
+  "serverUrl": "http://192.168.2.195:8010",
+  "autoCheckDelay": 1000,
+  "shouldAutoCheck": true,
+  "languageVariety": {
+    "en": "en-US",
+    "de": "de-DE",
+    "pt": "pt-PT",
+    "ca": "ca-ES"
+  },
+  "dictionary": [],
+  "syncDictionary": false,
+  "remoteDictionary": [],
+  "pickyMode": false,
+  "synonyms": "de",
+  "motherTongue": "de"
+}

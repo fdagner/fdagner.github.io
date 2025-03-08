@@ -1,0 +1,10 @@
+{
+  "createIfNotExists": true,
+  "skipMonday": false,
+  "skipTuesday": false,
+  "skipWednesday": false,
+  "skipThursday": false,
+  "skipFriday": false,
+  "skipSaturday": false,
+  "skipSunday": false
+}

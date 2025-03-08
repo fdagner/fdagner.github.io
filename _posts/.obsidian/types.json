@@ -1,0 +1,27 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "schüler": "multitext",
+    "Personen": "multitext",
+    "Datum": "date",
+    "Fach": "text",
+    "Ausrichter": "multitext",
+    "Krafttraining": "checkbox",
+    "Joggen": "checkbox",
+    "Krankheitstag": "checkbox",
+    "Stimmung": "multitext",
+    "Essen19uhr": "checkbox",
+    "Essenbis19uhr": "checkbox",
+    "selectedMonth": "text",
+    "Relevant": "multitext",
+    "Wiedervorlage": "date",
+    "Geburtstag": "date",
+    "Uhrzeit": "datetime",
+    "Datum und Uhrzeit": "datetime",
+    "Termin": "datetime",
+    "Klasse": "multitext",
+    "date": "datetime"
+  }
+}

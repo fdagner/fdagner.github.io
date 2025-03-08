@@ -1,0 +1,7 @@
+{
+  "snapToObjects": true,
+  "snapToGrid": true,
+  "defaultWheelBehavior": "pan",
+  "cardLabelVisibility": "never",
+  "zoomBreakpoint": -0.4
+}

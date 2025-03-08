@@ -1,0 +1,30 @@
+{
+  "markdown:toggle-preview": [],
+  "editor:delete-paragraph": [],
+  "inline-encrypter:decrypt": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "D"
+    }
+  ],
+  "inline-encrypter:encrypt": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
+  ],
+  "local-gpt:context-menu": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "K"
+    }
+  ]
+}

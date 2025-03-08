@@ -64,6 +64,8 @@ header_pages:
         url: /didaktischer-schieberegler/
       - title: Teampunkte
         url: /2025/01/01/teampunkte-erfassen/
+      - title: Python Web Editor
+        url: /python-web-editor/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

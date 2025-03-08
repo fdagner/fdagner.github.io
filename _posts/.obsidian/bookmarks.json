@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1731794760849,
+      "path": "Notizen/Personen und Kontakte.md"
+    },
+    {
+      "type": "file",
+      "ctime": 1735589531050,
+      "path": "Notizen/Tracker 2025.md"
+    },
+    {
+      "type": "file",
+      "ctime": 1731779381933,
+      "path": "Notizen/Präsentationen.md"
+    },
+    {
+      "type": "file",
+      "ctime": 1731780925498,
+      "path": "Notizen/Fortbildungen.md"
+    },
+    {
+      "type": "file",
+      "ctime": 1733920101268,
+      "path": "Notizen/Referentennetzwerk.md"
+    },
+    {
+      "type": "group",
+      "ctime": 1734087928916,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1731276041069,
+          "path": "Notizen/Unterricht.md"
+        }
+      ],
+      "title": "Aktuelle Projekte"
+    },
+    {
+      "type": "group",
+      "ctime": 1736362987710,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1735760959673,
+          "path": "Notizen/Erfolge 2025-01.md"
+        }
+      ],
+      "title": "Erfolge"
+    },
+    {
+      "type": "group",
+      "ctime": 1735761005608,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1732563146811,
+          "path": "Notizen/Tracker 2024.md"
+        }
+      ],
+      "title": "Archiv"
+    }
+  ]
+}

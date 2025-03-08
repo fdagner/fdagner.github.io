@@ -1,1 +1,10 @@
-{}
+{
+  "enabledCssSnippets": [
+    "S - Checkboxes",
+    "S - slides"
+  ],
+  "nativeMenus": false,
+  "theme": "obsidian",
+  "accentColor": "#7081ff",
+  "cssTheme": ""
+}

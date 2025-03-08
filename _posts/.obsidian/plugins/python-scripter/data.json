@@ -1,0 +1,36 @@
+{
+  "pythonPath": ".obsidian\\scripts\\python",
+  "pythonExe": "python",
+  "args": {
+    "termine.py": {
+      "pass_vault_path": true,
+      "pass_current_file": true,
+      "additional_args": [],
+      "additional_args_desc": [],
+      "prompted": [],
+      "length": 0,
+      "pythonExe": "",
+      "dotFile": ""
+    },
+    "termine _surface.py": {
+      "pass_vault_path": true,
+      "pass_current_file": true,
+      "additional_args": [],
+      "additional_args_desc": [],
+      "prompted": [],
+      "length": 0,
+      "pythonExe": "",
+      "dotFile": ""
+    },
+    "Termine_ohnePlugin.py": {
+      "pass_vault_path": true,
+      "pass_current_file": true,
+      "additional_args": [],
+      "additional_args_desc": [],
+      "prompted": [],
+      "length": 0,
+      "pythonExe": "",
+      "dotFile": ""
+    }
+  }
+}
