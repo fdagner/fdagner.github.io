@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python Web Editor
-date: 2025-03-08T12:30:00
+date: 2025-03-08T11:30:00
 categories:
   - OER
   - Unterricht
