@@ -2,6 +2,7 @@
 layout: post
 title: ByCS-Kursbild-Generator
 date: 2025-04-06T11:30:00
+image: "/assets/images/2025-04-06-kursbild.png"
 categories:
   - OER
   - moodle
