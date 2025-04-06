@@ -181,9 +181,9 @@ categories: [moodle]
             <label for="image-size">Bildgröße:</label>
             <input type="range" id="image-size" class="image-size-slider" min="25" max="200" value="50">
             <label for="image-position">Bildposition x:</label>
-            <input type="range" id="image-position" class="image-position-slider" min="0" max="100" value="50">
+            <input type="range" id="image-position" class="image-position-slider" min="-100" max="100" value="50">
             <label for="image-position">Bildposition y:</label>
-            <input type="range" id="image-position-y" class="image-position-slider" min="-100" max="100" value="0">
+            <input type="range" id="image-position-y" class="image-position-slider" min="-200" max="200" value="0">
             </div>
         </div>
       <button id="generate-btn">Header generieren</button>
