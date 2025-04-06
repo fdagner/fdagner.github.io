@@ -7,7 +7,6 @@ categories:
   - moodle
 ---
 
-## Einleitung
 **Seitdem in der ByCS-Lernplattform der Imagehub integriert ist, haben Lehrkräfte eine zentrale, lizenzfreie Bildquelle zur Verfügung, um ihre Kurse optisch aufzuwerten. Die dort bereitgestellten Bilder sind im SVG-Format gespeichert – und das bringt gleich mehrere Vorteile mit sich. SVG-Dateien sind vektorbasiert, das heißt, sie lassen sich ohne Qualitätsverlust skalieren. Außerdem können sie sehr leicht weiterverarbeitet werden – etwa im Kursbild. Um das zu erleichtern gibt es nun den [ByCS-Kursbild-Generator](/kursbild-generator/).**
 
 
