@@ -179,7 +179,7 @@ categories: [moodle]
             <input type="file" id="image-upload" accept="image/svg+xml">
             <div id="image-controls" class="hidden">
             <label for="image-size">Bildgröße:</label>
-            <input type="range" id="image-size" class="image-size-slider" min="25" max="200" value="100">
+            <input type="range" id="image-size" class="image-size-slider" min="25" max="200" value="200">
             <label for="image-position">Bildposition x:</label>
             <input type="range" id="image-position" class="image-position-slider" min="0" max="100" value="50">
             <label for="image-position">Bildposition y:</label>
