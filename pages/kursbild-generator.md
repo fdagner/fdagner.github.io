@@ -179,11 +179,11 @@ categories: [moodle]
             <input type="file" id="image-upload" accept="image/svg+xml">
             <div id="image-controls" class="hidden">
             <label for="image-size">Bildgröße:</label>
-            <input type="range" id="image-size" class="image-size-slider" min="25" max="350" value="50">
+            <input type="range" id="image-size" class="image-size-slider" min="25" max="200" value="100">
             <label for="image-position">Bildposition x:</label>
-            <input type="range" id="image-position" class="image-position-slider" min="-150" max="150" value="50">
+            <input type="range" id="image-position" class="image-position-slider" min="0" max="100" value="50">
             <label for="image-position">Bildposition y:</label>
-            <input type="range" id="image-position-y" class="image-position-slider" min="-200" max="200" value="0">
+            <input type="range" id="image-position-y" class="image-position-slider" min="-100" max="100" value="0">
             </div>
         </div>
       <button id="generate-btn">Header generieren</button>
@@ -218,6 +218,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const primaryColor = document.getElementById('primary-color');
     const secondaryColor = document.getElementById('secondary-color');
     let uploadedImage = null;
+    let uploadedImageAspectRatio = 1; // Default aspect ratio
+    
     generateBtn.addEventListener('click', generateHeader);
     downloadBtn.addEventListener('click', downloadSVG);
     imageUpload.addEventListener('change', handleImageUpload);
@@ -234,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
     imageSizeSlider.addEventListener('input', generateHeader); 
     imagePositionSlider.addEventListener('input', generateHeader);
     imagePositionSliderY.addEventListener('input', generateHeader);
+    
     function toggleSecondaryColor() {
         if (gradientType.value === 'none') {
             secondaryColorContainer.classList.add('disabled');
@@ -242,17 +245,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         generateHeader();
     }
-function handleImageUpload(event) {
+    
+    function handleImageUpload(event) {
     const file = event.target.files[0];
     if (file && file.type === 'image/svg+xml') {
         const reader = new FileReader();
         reader.onload = function(e) {
             const uploadedSVGContent = e.target.result;
+            
+            // Parse the SVG to get width and height for aspect ratio calculation
             const parser = new DOMParser();
-            const doc = parser.parseFromString(uploadedSVGContent, 'image/svg+xml');
-            const svgElement = doc.documentElement;
-            uploadedImage = svgElement.innerHTML;
-            // Bildsteuerung anzeigen
+            const svgDoc = parser.parseFromString(uploadedSVGContent, 'image/svg+xml');
+            const svgElement = svgDoc.documentElement;
+            
+            // Get width and height to calculate aspect ratio
+            let svgWidth = svgElement.getAttribute('width') || svgElement.getAttribute('viewBox')?.split(' ')[2];
+            let svgHeight = svgElement.getAttribute('height') || svgElement.getAttribute('viewBox')?.split(' ')[3];
+            
+            // Convert to numbers if they're strings with units
+            if (svgWidth && typeof svgWidth === 'string') {
+                svgWidth = parseFloat(svgWidth);
+            }
+            if (svgHeight && typeof svgHeight === 'string') {
+                svgHeight = parseFloat(svgHeight);
+            }
+            
+            // If no viewBox exists, create one based on width and height
+            if (!svgElement.getAttribute('viewBox')) {
+                if (svgWidth && svgHeight) {
+                    svgElement.setAttribute('viewBox', `0 0 ${svgWidth} ${svgHeight}`);
+                }
+            }
+            
+            // Calculate aspect ratio if both dimensions are available
+            if (svgWidth && svgHeight) {
+                uploadedImageAspectRatio = svgHeight / svgWidth;
+            }
+            
+            // Store the SVG content
+            uploadedImage = svgElement.outerHTML;  // Use the outerHTML to save the complete SVG content
+            
+            // Show image controls
             document.getElementById('image-controls').classList.remove('hidden');
             generateHeader();
         };
@@ -261,6 +294,8 @@ function handleImageUpload(event) {
         alert('Bitte eine SVG-Datei hochladen.');
     }
 }
+
+    
     function generateHeader() {
         const width = document.getElementById('width').value;
         const height = document.getElementById('height').value;
@@ -275,10 +310,9 @@ function handleImageUpload(event) {
         const imageSize = imageSizeSlider.value;
         const imagePosition = imagePositionSlider.value;
         const imagePositionY = imagePositionSliderY.value;
-        const width_upload = width / 4;
-        const height_upload = height/4;
         const gradientTypeValue = gradientType.value;
         const duration = speed === 'slow' ? 15 : speed === 'fast' ? 5 : 10; 
+        
         // Generiere den korrekten Farbverlauf basierend auf der Auswahl
         let gradientDef = '';
         let fillColor = '';
@@ -314,7 +348,38 @@ function handleImageUpload(event) {
                     <stop offset="100%" stop-color="${secondaryColorValue}" />
                 </linearGradient>`;
             }
-        }       
+        }
+        
+        // Create the SVG with foreignObject if there's an uploaded image
+        let uploadedImageElement = '';
+        if (uploadedImage) {
+            // Calculate width based on slider
+            const imgWidth = width/4 * imageSize / 100;
+            
+            // Calculate height based on width and aspect ratio
+            const imgHeight = imgWidth * uploadedImageAspectRatio;
+            
+            // Calculate positions
+            const posX = (width - width * imagePosition / 100) - imgWidth;
+            const posY = (imagePositionY * height / 100);
+
+            const parser = new DOMParser();
+            const svgDoc = parser.parseFromString(uploadedImage, 'image/svg+xml');
+            const svgElement = svgDoc.documentElement;
+
+            // Setze die gewünschte Größe auf das SVG-Element
+            svgElement.setAttribute('width', "100%");
+            svgElement.setAttribute('height', "100%");
+
+             // Create foreignObject element with the uploaded SVG content
+            // Add overflow: visible to prevent clipping
+            uploadedImageElement = `
+            <foreignObject x="${posX+imgWidth/2}" y="${posY}" width="${imgWidth}" height="${imgHeight}" style="overflow: visible;">
+                ${svgElement.outerHTML} 
+            </foreignObject>
+            `;
+        }
+        
         const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
         <defs>
             ${gradientDef}
@@ -322,65 +387,62 @@ function handleImageUpload(event) {
         </defs>
         <rect width="100%" height="100%" ${fillColor} />
         <rect width="100%" height="100%" fill="url(#${pattern}-pattern)" />
-        ${uploadedImage ? `
-        <g transform="translate(${(width - width * imagePosition / 100) - (width_upload * imageSize / 100)}, ${(imagePositionY * height / 100) + (height_upload * imageSize / 100)}) scale(${imageSize / 4 / 100})">
-            ${uploadedImage}
-        </g>
-        ` : ''}
+        ${uploadedImageElement}
         </svg>`;
         svgContainer.innerHTML = svg;
     }
+    
     function createPattern(type, color, duration, animation) {
-    const duration_translate = duration;
-    const duration_scale = duration*8;
-    const duration_rotate = duration*32;
-    const duration_fade = duration;   
-    // Farbmanipulation für das Muster
-    let patternColor = color;
-    // Farbe in RGB konvertieren
-    const r = parseInt(color.slice(1, 3), 16);
-    const g = parseInt(color.slice(3, 5), 16);
-    const b = parseInt(color.slice(5, 7), 16);
-    const brightness = (r * 299 + g * 587 + b * 114) / 1000;  
-    if (brightness > 128) {
-        // Farbe abdunkeln für helle Hintergründe
-        const darkerR = Math.max(0, r - 50);
-        const darkerG = Math.max(0, g - 50);
-        const darkerB = Math.max(0, b - 50);
-        patternColor = `rgba(${darkerR}, ${darkerG}, ${darkerB}, 0.7)`;
-    } else {
-        // Farbe aufhellen für dunkle Hintergründe
-        const lighterR = Math.min(255, r + 50);
-        const lighterG = Math.min(255, g + 50);
-        const lighterB = Math.min(255, b + 50);
-        patternColor = `rgba(${lighterR}, ${lighterG}, ${lighterB}, 0.7)`;
-    }   
-    // Rest der Funktion bleibt gleich, nur mit neuer patternColor
-    let shape = '';
-    if (type === 'none') {
-        shape = `  
-        `;
-    } else if (type === 'waves') {
-        shape = `
-            <path d="M-50 25 C-30 10, -10 10, 0 25 C10 40, 30 40, 50 25 C70 10, 90 10, 100 25 C110 40, 130 40, 150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25" 
-                stroke="${patternColor}" stroke-width="5" fill="none" />
-            <path d="M150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25 C270 10, 290 10, 310 25 C320 40, 340 40, 360 25 C370 10, 390 10, 400 25" 
-                stroke="${patternColor}" stroke-width="1" fill="none" />
-        `;
-    } else if (type === 'circles') {
-        shape = `
-            <circle cx="30" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" />
-            <circle cx="90" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" />
-        `;
-    } else if (type === 'dots') {
-        shape = `
-            <circle cx="15" cy="15" r="3" fill="${patternColor}" />
-            <circle cx="45" cy="15" r="3" fill="${patternColor}" />
-        `;
-    }
-    const size = (type === 'dots') ? 30 : (type === 'circles') ? 60 : 100;
-    let anim = '';
-    if (animation !== 'none') {
+        const duration_translate = duration;
+        const duration_scale = duration*8;
+        const duration_rotate = duration*32;
+        const duration_fade = duration;   
+        // Farbmanipulation für das Muster
+        let patternColor = color;
+        // Farbe in RGB konvertieren
+        const r = parseInt(color.slice(1, 3), 16);
+        const g = parseInt(color.slice(3, 5), 16);
+        const b = parseInt(color.slice(5, 7), 16);
+        const brightness = (r * 299 + g * 587 + b * 114) / 1000;  
+        if (brightness > 128) {
+            // Farbe abdunkeln für helle Hintergründe
+            const darkerR = Math.max(0, r - 50);
+            const darkerG = Math.max(0, g - 50);
+            const darkerB = Math.max(0, b - 50);
+            patternColor = `rgba(${darkerR}, ${darkerG}, ${darkerB}, 0.7)`;
+        } else {
+            // Farbe aufhellen für dunkle Hintergründe
+            const lighterR = Math.min(255, r + 50);
+            const lighterG = Math.min(255, g + 50);
+            const lighterB = Math.min(255, b + 50);
+            patternColor = `rgba(${lighterR}, ${lighterG}, ${lighterB}, 0.7)`;
+        }   
+        // Rest der Funktion bleibt gleich, nur mit neuer patternColor
+        let shape = '';
+        if (type === 'none') {
+            shape = `  
+            `;
+        } else if (type === 'waves') {
+            shape = `
+                <path d="M-50 25 C-30 10, -10 10, 0 25 C10 40, 30 40, 50 25 C70 10, 90 10, 100 25 C110 40, 130 40, 150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25" 
+                    stroke="${patternColor}" stroke-width="5" fill="none" />
+                <path d="M150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25 C270 10, 290 10, 310 25 C320 40, 340 40, 360 25 C370 10, 390 10, 400 25" 
+                    stroke="${patternColor}" stroke-width="1" fill="none" />
+            `;
+        } else if (type === 'circles') {
+            shape = `
+                <circle cx="30" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" />
+                <circle cx="90" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" />
+            `;
+        } else if (type === 'dots') {
+            shape = `
+                <circle cx="15" cy="15" r="3" fill="${patternColor}" />
+                <circle cx="45" cy="15" r="3" fill="${patternColor}" />
+            `;
+        }
+        const size = (type === 'dots') ? 30 : (type === 'circles') ? 60 : 100;
+        let anim = '';
+        if (animation !== 'none') {
             // Hinzufügen von neuen Animationen
             if (animation === 'translate') {
                 anim = `<animateTransform attributeName="patternTransform" type="translate" values="0,0;${size * 2},0" dur="${duration_translate}s" repeatCount="indefinite" />`;
@@ -394,31 +456,32 @@ function handleImageUpload(event) {
                 anim = `<animateTransform attributeName="patternTransform" type="translate" values="0,0;${size * 2},${size * 2}" dur="${duration_translate}s" repeatCount="indefinite" />`;
             }
         }
-    let patternContent = `${anim}${shape}`
-    if (animation === 'fade') {
-    // Wrap content in <g> only for fade animation
-    patternContent = `<g>${patternContent}</g>`;
-}
-    return `<pattern id="${type}-pattern" patternUnits="userSpaceOnUse" width="${size * 2}" height="${size}">
-        ${patternContent}
-    </pattern>`;
-}
-// Alle Radiobuttons mit dem Namen "pattern" finden
-const patternRadios = document.querySelectorAll('input[name="pattern"]');
-const animationOptions = document.getElementById('animation-options');
-// Event-Listener für alle Radiobuttons hinzufügen
-patternRadios.forEach(radio => {
-    radio.addEventListener('change', function() {
-        if (this.value === 'none') {
-            // Wenn "Kein Muster" ausgewählt ist, Animation ausblenden
-            animationOptions.classList.add('hidden');
-        } else {
-            // Wenn ein Muster ausgewählt ist, Animation anzeigen
-            animationOptions.classList.remove('hidden');
+        let patternContent = `${anim}${shape}`
+        if (animation === 'fade') {
+            // Wrap content in <g> only for fade animation
+            patternContent = `<g>${patternContent}</g>`;
         }
+        return `<pattern id="${type}-pattern" patternUnits="userSpaceOnUse" width="${size * 2}" height="${size}">
+            ${patternContent}
+        </pattern>`;
+    }
+    // Alle Radiobuttons mit dem Namen "pattern" finden
+    const patternRadios = document.querySelectorAll('input[name="pattern"]');
+    const animationOptions = document.getElementById('animation-options');
+    // Event-Listener für alle Radiobuttons hinzufügen
+    patternRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'none') {
+                // Wenn "Kein Muster" ausgewählt ist, Animation ausblenden
+                animationOptions.classList.add('hidden');
+            } else {
+                // Wenn ein Muster ausgewählt ist, Animation anzeigen
+                animationOptions.classList.remove('hidden');
+            }
+        });
     });
-});
-function downloadSVG() {
+    
+    function downloadSVG() {
         const svg = svgContainer.innerHTML;
         const blob = new Blob([svg], { type: 'image/svg+xml' });
         const url = URL.createObjectURL(blob);
