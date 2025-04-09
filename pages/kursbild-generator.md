@@ -5,7 +5,18 @@ permalink: /kursbild-generator/
 categories: [moodle]
 ---
 
- <style>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
         .container {
             display: flex;
             flex-direction: column;
@@ -73,7 +84,7 @@ categories: [moodle]
             margin-top: 20px;
             text-align: center;
         }
-        #download-btn {
+        #download-btn, #generate-btn {
             background-color: #2196F3;
         }
         #download-btn:hover {
@@ -107,7 +118,8 @@ categories: [moodle]
             display: none;
         }
     </style>
-
+</head>
+<body>
 <div class="container">
     <div class="controls">
         <div class="control-group">
@@ -115,11 +127,11 @@ categories: [moodle]
             <div class="size-inputs">
                 <div>
                     <label for="width">Breite (px)</label>
-                    <input type="number" id="width" value="1200" min="400" max="2000">
+                    <input type="number" id="width" value="1800" min="800" max="2000">
                 </div>
                 <div>
                     <label for="height">Höhe (px)</label>
-                    <input type="number" id="height" value="250" min="100" max="800">
+                    <input type="number" id="height" value="375" min="100" max="800">
                 </div>
             </div>
         </div>
@@ -131,7 +143,7 @@ categories: [moodle]
                 <option value="radial">Radial (Mitte nach Außen)</option>
                 <option value="diagonal">Diagonal</option>
                 <option value="none">Kein Farbverlauf</option>
-            </select>         
+            </select>     
             <div class="color-inputs" id="color-selection">
                 <div>
                     <label for="primary-color">Primärfarbe</label>
@@ -151,6 +163,8 @@ categories: [moodle]
                 <label><input type="radio" name="pattern" value="waves"> Wellen</label>
                 <label><input type="radio" name="pattern" value="circles"> Kreise</label>
                 <label><input type="radio" name="pattern" value="dots"> Punkte</label>
+                <label><input type="radio" name="pattern" value="dabs"> Sprenkel</label>
+                <label><input type="radio" name="pattern" value="stars"> Sternenhimmel</label>
             </div>
         </div>
         <div id="animation-options" class="hidden">
@@ -176,34 +190,59 @@ categories: [moodle]
      </div>
         <div class="control-group">
             <label>Bild-Element hochladen (SVG)</label>
-            <input type="file" id="image-upload" accept="image/svg+xml">
+            <input type="file" id="image-upload" accept="image/svg+xml"><br><br>
             <div id="image-controls" class="hidden">
             <label for="image-size">Bildgröße:</label>
-            <input type="range" id="image-size" class="image-size-slider" min="25" max="200" value="200">
-            <label for="image-position">Bildposition x:</label>
-            <input type="range" id="image-position" class="image-position-slider" min="0" max="100" value="50">
-            <label for="image-position">Bildposition y:</label>
-            <input type="range" id="image-position-y" class="image-position-slider" min="-100" max="100" value="0">
+            <input type="range" id="image-size" class="image-size-slider" min="25" max="200" value="100">
+            <label for="image-position" class="hidden">Bildposition x:</label>
+            <input type="range" id="image-position" class="image-position-slider hidden" min="0" max="100" value="50">
+            <label for="image-position" class="hidden">Bildposition y:</label>
+            <input type="range" id="image-position-y" class="image-position-slider hidden" min="-100" max="100" value="0">
+            <br>
+            <button id="reset-position-btn">Position zurücksetzen</button>
             </div>
         </div>
-      <button id="generate-btn">Header generieren</button>
     </div>
     <div class="preview">
         <h3>Vorschau</h3>
         <div id="svg-container"></div>
         <div class="download-section">
             <button id="download-btn">Als SVG herunterladen</button>
-            <p>
-  <small>
-      Die erzeugten Bilder stehen (abhängig vom hochgeladenen Bildelement) unter der Lizenz <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank" rel="license noopener noreferrer">CC0 1.0</a>.
-  </small>
-</p>
+            <button id="generate-btn">Kursbild aktualisieren</button>
         </div>
     </div>
-
-
 </div>
-
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const widthInput = document.getElementById("width");
+        const heightInput = document.getElementById("height");
+        // Wertebereich
+        const widthMin = parseInt(widthInput.min);
+        const widthMax = parseInt(widthInput.max);
+        const heightMin = parseInt(heightInput.min);
+        const heightMax = parseInt(heightInput.max); 
+        function validateInput(input, min, max) {
+            let value = parseInt(input.value);
+            if (isNaN(value)) {
+                input.value = min;
+                return;
+            }
+            if (value < min) {
+                input.value = min;
+                alert(`Wert zu klein! Mindestwert ist ${min}px.`);
+            } else if (value > max) {
+                input.value = max;
+                alert(`Wert zu groß! Maximalwert ist ${max}px.`);
+            }
+        }
+        widthInput.addEventListener("change", () => {
+            validateInput(widthInput, widthMin, widthMax);
+        });
+        heightInput.addEventListener("change", () => {
+            validateInput(heightInput, heightMin, heightMax);
+        });
+    });
+    </script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const generateBtn = document.getElementById('generate-btn');
@@ -213,13 +252,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageSizeSlider = document.getElementById('image-size');
     const imagePositionSlider = document.getElementById('image-position');
     const imagePositionSliderY = document.getElementById('image-position-y');
+    const resetPositionBtn = document.getElementById('reset-position-btn'); // Neuer Button
     const gradientType = document.getElementById('gradient-type');
     const secondaryColorContainer = document.getElementById('secondary-color-container');
     const primaryColor = document.getElementById('primary-color');
     const secondaryColor = document.getElementById('secondary-color');
     let uploadedImage = null;
-    let uploadedImageAspectRatio = 1; // Default aspect ratio
-    
+    let uploadedImageAspectRatio = 1;
+    let isDragging = false;
+    let currentX, currentY;
+    let initialX, initialY;
     generateBtn.addEventListener('click', generateHeader);
     downloadBtn.addEventListener('click', downloadSVG);
     imageUpload.addEventListener('change', handleImageUpload);
@@ -236,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
     imageSizeSlider.addEventListener('input', generateHeader); 
     imagePositionSlider.addEventListener('input', generateHeader);
     imagePositionSliderY.addEventListener('input', generateHeader);
-    
+    resetPositionBtn.addEventListener('click', resetPosition); // Event-Listener für den Button
     function toggleSecondaryColor() {
         if (gradientType.value === 'none') {
             secondaryColorContainer.classList.add('disabled');
@@ -245,205 +287,210 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         generateHeader();
     }
-    
     function handleImageUpload(event) {
-    const file = event.target.files[0];
-    if (file && file.type === 'image/svg+xml') {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const uploadedSVGContent = e.target.result;
-            
-            // Parse the SVG to get width and height for aspect ratio calculation
-            const parser = new DOMParser();
-            const svgDoc = parser.parseFromString(uploadedSVGContent, 'image/svg+xml');
-            const svgElement = svgDoc.documentElement;
-            
-            // Get width and height to calculate aspect ratio
-            let svgWidth = svgElement.getAttribute('width') || svgElement.getAttribute('viewBox')?.split(' ')[2];
-            let svgHeight = svgElement.getAttribute('height') || svgElement.getAttribute('viewBox')?.split(' ')[3];
-            
-            // Convert to numbers if they're strings with units
-            if (svgWidth && typeof svgWidth === 'string') {
-                svgWidth = parseFloat(svgWidth);
-            }
-            if (svgHeight && typeof svgHeight === 'string') {
-                svgHeight = parseFloat(svgHeight);
-            }
-            
-            // If no viewBox exists, create one based on width and height
-            if (!svgElement.getAttribute('viewBox')) {
-                if (svgWidth && svgHeight) {
+        const file = event.target.files[0];
+        if (file && file.type === 'image/svg+xml') {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                uploadedImage = e.target.result;
+                const parser = new DOMParser();
+                const svgDoc = parser.parseFromString(uploadedImage, 'image/svg+xml');
+                const svgElement = svgDoc.documentElement;
+                let svgWidth = svgElement.getAttribute('width') || svgElement.getAttribute('viewBox')?.split(' ')[2];
+                let svgHeight = svgElement.getAttribute('height') || svgElement.getAttribute('viewBox')?.split(' ')[3];
+                if (svgWidth && typeof svgWidth === 'string') svgWidth = parseFloat(svgWidth);
+                if (svgHeight && typeof svgHeight === 'string') svgHeight = parseFloat(svgHeight);
+                if (!svgElement.getAttribute('viewBox') && svgWidth && svgHeight) {
                     svgElement.setAttribute('viewBox', `0 0 ${svgWidth} ${svgHeight}`);
                 }
-            }
-            
-            // Calculate aspect ratio if both dimensions are available
-            if (svgWidth && svgHeight) {
-                uploadedImageAspectRatio = svgHeight / svgWidth;
-            }
-            
-            // Store the SVG content
-            uploadedImage = svgElement.outerHTML;  // Use the outerHTML to save the complete SVG content
-            
-            // Show image controls
-            document.getElementById('image-controls').classList.remove('hidden');
-            generateHeader();
-        };
-        reader.readAsText(file);
-    } else {
-        alert('Bitte eine SVG-Datei hochladen.');
+                if (svgWidth && svgHeight) {
+                    uploadedImageAspectRatio = svgHeight / svgWidth;
+                }
+                uploadedImage = svgElement.outerHTML;
+                document.getElementById('image-controls').classList.remove('hidden');
+                generateHeader();
+            };
+            reader.readAsText(file);
+        } else {
+            alert('Bitte eine SVG-Datei hochladen.');
+        }
     }
-}
-
-    
     function generateHeader() {
-        const width = document.getElementById('width').value;
-        const height = document.getElementById('height').value;
+        const width = parseInt(document.getElementById('width').value);
+        const height = parseInt(document.getElementById('height').value);
         const primaryTransparent = document.getElementById('primary-transparent').checked;
         const secondaryTransparent = document.getElementById('secondary-transparent').checked;
-        const primaryColorObjValue = document.getElementById('primary-transparent').checked;
-        const primaryColorValue = primaryTransparent ? 'transparent' : document.getElementById('primary-color').value;
-        const secondaryColorValue = secondaryTransparent ? 'transparent' : document.getElementById('secondary-color').value;
+        const primaryColorValue = primaryTransparent ? 'transparent' : primaryColor.value;
+        const secondaryColorValue = secondaryTransparent ? 'transparent' : secondaryColor.value;
         const pattern = document.querySelector('input[name="pattern"]:checked').value;
         const speed = document.getElementById('animation-speed').value;
         const animationType = document.getElementById('animation-type').value;
-        const imageSize = imageSizeSlider.value;
-        const imagePosition = imagePositionSlider.value;
-        const imagePositionY = imagePositionSliderY.value;
+        const imageSize = parseInt(imageSizeSlider.value);
+        const imagePosition = parseInt(imagePositionSlider.value);
+        const imagePositionY = parseInt(imagePositionSliderY.value);
         const gradientTypeValue = gradientType.value;
-        const duration = speed === 'slow' ? 15 : speed === 'fast' ? 5 : 10; 
-        
-        // Generiere den korrekten Farbverlauf basierend auf der Auswahl
+        const duration = speed === 'slow' ? 15 : speed === 'fast' ? 5 : 10;
         let gradientDef = '';
         let fillColor = '';
         if (gradientTypeValue === 'none') {
-            // Kein Farbverlauf, verwende die Primärfarbe als einfache Füllung
             fillColor = `fill="${primaryColorValue}"`;
         } else {
-            // Erstelle einen Farbverlauf und verwende ihn als Füllung
             const gradientId = 'bg-gradient';
-            fillColor = `fill="url(#${gradientId})"`;          
+            fillColor = `fill="url(#${gradientId})"`;
             if (gradientTypeValue === 'linear') {
-                gradientDef = `
-                <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="${primaryColorValue}" />
-                    <stop offset="100%" stop-color="${secondaryColorValue}" />
-                </linearGradient>`;
+                gradientDef = `<linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="${primaryColorValue}" /><stop offset="100%" stop-color="${secondaryColorValue}" /></linearGradient>`;
             } else if (gradientTypeValue === 'linear-top-bottom') {
-                gradientDef = `
-                <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="${primaryColorValue}" />
-                    <stop offset="100%" stop-color="${secondaryColorValue}" />
-                </linearGradient>`;
+                gradientDef = `<linearGradient id="${gradientId}" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="${primaryColorValue}" /><stop offset="100%" stop-color="${secondaryColorValue}" /></linearGradient>`;
             } else if (gradientTypeValue === 'radial') {
-                gradientDef = `
-                <radialGradient id="${gradientId}" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
-                    <stop offset="0%" stop-color="${primaryColorValue}" />
-                    <stop offset="100%" stop-color="${secondaryColorValue}" />
-                </radialGradient>`;
+                gradientDef = `<radialGradient id="${gradientId}" cx="50%" cy="50%" r="70%" fx="50%" fy="50%"><stop offset="0%" stop-color="${primaryColorValue}" /><stop offset="100%" stop-color="${secondaryColorValue}" /></radialGradient>`;
             } else if (gradientTypeValue === 'diagonal') {
-                gradientDef = `
-                <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="${primaryColorValue}" />
-                    <stop offset="100%" stop-color="${secondaryColorValue}" />
-                </linearGradient>`;
+                gradientDef = `<linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${primaryColorValue}" /><stop offset="100%" stop-color="${secondaryColorValue}" /></linearGradient>`;
             }
         }
-        
-        // Create the SVG with foreignObject if there's an uploaded image
         let uploadedImageElement = '';
         if (uploadedImage) {
-            // Calculate width based on slider
-            const imgWidth = width/4 * imageSize / 100;
-            
-            // Calculate height based on width and aspect ratio
+            const imgWidth = width / 4 * imageSize / 100;
             const imgHeight = imgWidth * uploadedImageAspectRatio;
-            
-            // Calculate positions
-            const posX = (width - width * imagePosition / 100) - imgWidth;
-            const posY = (imagePositionY * height / 100);
-
+            // Positionierung: Slider 0 = linker Rand bei -imgWidth, Slider 100 = rechter Rand bei width
+            const posX = (imagePosition / 100) * (width + imgWidth) - imgWidth;
+            const posY = ((imagePositionY + 100) / 200) * (height + imgHeight) - imgHeight;
             const parser = new DOMParser();
             const svgDoc = parser.parseFromString(uploadedImage, 'image/svg+xml');
             const svgElement = svgDoc.documentElement;
-
-            // Setze die gewünschte Größe auf das SVG-Element
             svgElement.setAttribute('width', "100%");
             svgElement.setAttribute('height', "100%");
-
-             // Create foreignObject element with the uploaded SVG content
-            // Add overflow: visible to prevent clipping
             uploadedImageElement = `
-            <foreignObject x="${posX+imgWidth/2}" y="${posY}" width="${imgWidth}" height="${imgHeight}" style="overflow: visible;">
-                ${svgElement.outerHTML} 
-            </foreignObject>
+                <foreignObject 
+                    id="draggable-image" 
+                    x="${posX}" 
+                    y="${posY}"
+                    width="${imgWidth}" 
+                    height="${imgHeight}" 
+                    style="overflow: visible; cursor: move;"
+                >
+                    ${svgElement.outerHTML}
+                </foreignObject>
             `;
         }
-        
         const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
-        <defs>
-            ${gradientDef}
-            ${createPattern(pattern, primaryColorValue, duration, animationType)}
-        </defs>
-        <rect width="100%" height="100%" ${fillColor} />
-        <rect width="100%" height="100%" fill="url(#${pattern}-pattern)" />
-        ${uploadedImageElement}
+            <defs>${gradientDef}${createPattern(pattern, primaryColorValue, duration, animationType)}</defs>
+            <rect width="100%" height="100%" ${fillColor} />
+            <rect width="100%" height="100%" fill="url(#${pattern}-pattern)" />
+            ${uploadedImageElement}
         </svg>`;
         svgContainer.innerHTML = svg;
+        if (uploadedImage) {
+            const draggable = document.getElementById('draggable-image');
+            if (draggable) {
+                draggable.removeEventListener('mousedown', startDragging);
+                document.removeEventListener('mousemove', drag);
+                document.removeEventListener('mouseup', stopDragging);
+                draggable.removeEventListener('touchstart', startDragging);
+                document.removeEventListener('touchmove', drag);
+                document.removeEventListener('touchend', stopDragging);
+                draggable.addEventListener('mousedown', startDragging);
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('mouseup', stopDragging);
+                draggable.addEventListener('touchstart', startDragging, { passive: false });
+                document.addEventListener('touchmove', drag, { passive: false });
+                document.addEventListener('touchend', stopDragging, { passive: false });
+            }
+        }
     }
-    
+    function startDragging(e) {
+        e.preventDefault();
+        isDragging = true;
+        const rect = svgContainer.getBoundingClientRect();
+        if (e.type === 'touchstart') {
+            initialX = e.touches[0].clientX - rect.left;
+            initialY = e.touches[0].clientY - rect.top;
+        } else {
+            initialX = e.clientX - rect.left;
+            initialY = e.clientY - rect.top;
+        }
+        const draggable = document.getElementById('draggable-image');
+        currentX = parseFloat(draggable.getAttribute('x'));
+        currentY = parseFloat(draggable.getAttribute('y'));
+    }
+    function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        const rect = svgContainer.getBoundingClientRect();
+        const width = parseInt(document.getElementById('width').value);
+        const height = parseInt(document.getElementById('height').value);
+        const imgWidth = (width / 4 * parseInt(imageSizeSlider.value) / 100);
+        const imgHeight = imgWidth * uploadedImageAspectRatio;
+        let newX, newY;
+        if (e.type === 'touchmove') {
+            newX = e.touches[0].clientX - rect.left;
+            newY = e.touches[0].clientY - rect.top;
+        } else {
+            newX = e.clientX - rect.left;
+            newY = e.clientY - rect.top;
+        }
+        const dx = newX - initialX;
+        const dy = newY - initialY;
+        const updatedX = currentX + dx;
+        const updatedY = currentY + dy;
+        // Begrenze die Position: linker Rand bei -imgWidth, rechter Rand bei width
+        const boundedX = Math.max(-imgWidth, Math.min(updatedX, width));
+        const boundedY = Math.max(-imgHeight, Math.min(updatedY, height));
+        const draggable = document.getElementById('draggable-image');
+        draggable.setAttribute('x', boundedX);
+        draggable.setAttribute('y', boundedY);
+        // Berechne die Slider-Werte basierend auf der aktuellen Position
+        const posXPercentage = ((boundedX + imgWidth) / (width + imgWidth)) * 100; // 0-100
+        const posYPercentage = (((boundedY + imgHeight) / (height + imgHeight)) * 200) - 100; // -100 bis 100
+        imagePositionSlider.value = Math.round(Math.max(0, Math.min(100, posXPercentage)));
+        imagePositionSliderY.value = Math.round(Math.max(-100, Math.min(100, posYPercentage)));
+    }
+    function stopDragging() {
+        isDragging = false;
+    }
+    // Neue Funktion zum Zurücksetzen der Position
+    function resetPosition() {
+        imagePositionSlider.value = 50; // Mitte auf X-Achse (0 bis 100)
+        imagePositionSliderY.value = 0; // Mitte auf Y-Achse (-100 bis 100)
+        generateHeader(); // Header neu generieren, um die Änderung anzuwenden
+    }
     function createPattern(type, color, duration, animation) {
         const duration_translate = duration;
-        const duration_scale = duration*8;
-        const duration_rotate = duration*32;
-        const duration_fade = duration;   
-        // Farbmanipulation für das Muster
+        const duration_scale = duration * 8;
+        const duration_rotate = duration * 32;
+        const duration_fade = duration;
         let patternColor = color;
-        // Farbe in RGB konvertieren
         const r = parseInt(color.slice(1, 3), 16);
         const g = parseInt(color.slice(3, 5), 16);
         const b = parseInt(color.slice(5, 7), 16);
-        const brightness = (r * 299 + g * 587 + b * 114) / 1000;  
+        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
         if (brightness > 128) {
-            // Farbe abdunkeln für helle Hintergründe
             const darkerR = Math.max(0, r - 50);
             const darkerG = Math.max(0, g - 50);
             const darkerB = Math.max(0, b - 50);
             patternColor = `rgba(${darkerR}, ${darkerG}, ${darkerB}, 0.7)`;
         } else {
-            // Farbe aufhellen für dunkle Hintergründe
             const lighterR = Math.min(255, r + 50);
             const lighterG = Math.min(255, g + 50);
             const lighterB = Math.min(255, b + 50);
             patternColor = `rgba(${lighterR}, ${lighterG}, ${lighterB}, 0.7)`;
-        }   
-        // Rest der Funktion bleibt gleich, nur mit neuer patternColor
+        }
         let shape = '';
         if (type === 'none') {
-            shape = `  
-            `;
+            shape = ``;
         } else if (type === 'waves') {
-            shape = `
-                <path d="M-50 25 C-30 10, -10 10, 0 25 C10 40, 30 40, 50 25 C70 10, 90 10, 100 25 C110 40, 130 40, 150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25" 
-                    stroke="${patternColor}" stroke-width="5" fill="none" />
-                <path d="M150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25 C270 10, 290 10, 310 25 C320 40, 340 40, 360 25 C370 10, 390 10, 400 25" 
-                    stroke="${patternColor}" stroke-width="1" fill="none" />
-            `;
+            shape = `<path d="M-50 25 C-30 10, -10 10, 0 25 C10 40, 30 40, 50 25 C70 10, 90 10, 100 25 C110 40, 130 40, 150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25" stroke="${patternColor}" stroke-width="5" fill="none" /><path d="M150 25 C170 10, 190 10, 200 25 C210 40, 230 40, 250 25 C270 10, 290 10, 310 25 C320 40, 340 40, 360 25 C370 10, 390 10, 400 25" stroke="${patternColor}" stroke-width="1" fill="none" />`;
         } else if (type === 'circles') {
-            shape = `
-                <circle cx="30" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" />
-                <circle cx="90" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" />
-            `;
+            shape = `<circle cx="30" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" /><circle cx="90" cy="30" r="20" fill="none" stroke="${patternColor}" stroke-width="2" />`;
         } else if (type === 'dots') {
-            shape = `
-                <circle cx="15" cy="15" r="3" fill="${patternColor}" />
-                <circle cx="45" cy="15" r="3" fill="${patternColor}" />
-            `;
+            shape = `<circle cx="15" cy="15" r="3" fill="${patternColor}" /><circle cx="45" cy="15" r="3" fill="${patternColor}" />`;
+        } else if (type === 'dabs') {
+            shape = `<circle cx="50" cy="20" r="2" fill="${patternColor}" /><circle cx="70" cy="30" r="2" fill="${patternColor}" /><circle cx="90" cy="40" r="2" fill="${patternColor}" /><circle cx="110" cy="50" r="2" fill="${patternColor}" />`;
+        } else if (type === 'stars') {
+            shape = `<circle cx="10" cy="10" r="2" fill="${patternColor}" /><circle cx="30" cy="50" r="2" fill="${patternColor}" /><circle cx="70" cy="80" r="2" fill="${patternColor}" /><circle cx="120" cy="20" r="2" fill="${patternColor}" /><circle cx="150" cy="60" r="2" fill="${patternColor}" />`;
         }
         const size = (type === 'dots') ? 30 : (type === 'circles') ? 60 : 100;
         let anim = '';
         if (animation !== 'none') {
-            // Hinzufügen von neuen Animationen
             if (animation === 'translate') {
                 anim = `<animateTransform attributeName="patternTransform" type="translate" values="0,0;${size * 2},0" dur="${duration_translate}s" repeatCount="indefinite" />`;
             } else if (animation === 'translate2') {
@@ -456,31 +503,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 anim = `<animateTransform attributeName="patternTransform" type="translate" values="0,0;${size * 2},${size * 2}" dur="${duration_translate}s" repeatCount="indefinite" />`;
             }
         }
-        let patternContent = `${anim}${shape}`
+        let patternContent = `${anim}${shape}`;
         if (animation === 'fade') {
-            // Wrap content in <g> only for fade animation
             patternContent = `<g>${patternContent}</g>`;
         }
-        return `<pattern id="${type}-pattern" patternUnits="userSpaceOnUse" width="${size * 2}" height="${size}">
-            ${patternContent}
-        </pattern>`;
+       return `<pattern id="${type}-pattern" patternUnits="userSpaceOnUse" width="${size * 2}" height="${size}">${patternContent}</pattern>`;
     }
-    // Alle Radiobuttons mit dem Namen "pattern" finden
     const patternRadios = document.querySelectorAll('input[name="pattern"]');
     const animationOptions = document.getElementById('animation-options');
-    // Event-Listener für alle Radiobuttons hinzufügen
     patternRadios.forEach(radio => {
         radio.addEventListener('change', function() {
-            if (this.value === 'none') {
-                // Wenn "Kein Muster" ausgewählt ist, Animation ausblenden
-                animationOptions.classList.add('hidden');
-            } else {
-                // Wenn ein Muster ausgewählt ist, Animation anzeigen
-                animationOptions.classList.remove('hidden');
-            }
+            animationOptions.classList.toggle('hidden', this.value === 'none');
         });
     });
-    
     function downloadSVG() {
         const svg = svgContainer.innerHTML;
         const blob = new Blob([svg], { type: 'image/svg+xml' });
@@ -490,8 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.download = 'header.svg';
         link.click();
         URL.revokeObjectURL(url);
-    }   
-    // Initialer Aufruf um den Header zu generieren
+    }
     generateHeader();
 });
 </script>
