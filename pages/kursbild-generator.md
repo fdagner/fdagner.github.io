@@ -210,6 +210,9 @@ categories: [moodle]
             <button id="download-btn">Als SVG herunterladen</button>
             <button id="generate-btn">Kursbild aktualisieren</button>
         </div>
+        <small>
+      Die erzeugten Bilder stehen (abhängig vom hochgeladenen Bildelement) unter der Lizenz <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank" rel="license noopener noreferrer">CC0 1.0</a>.
+  </small>
     </div>
 </div>
 <script>
