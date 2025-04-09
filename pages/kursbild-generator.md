@@ -114,8 +114,6 @@ categories: [moodle]
             display: none;
         }
     </style>
-</head>
-<body>
 <div class="container">
     <div class="controls">
         <div class="control-group">
