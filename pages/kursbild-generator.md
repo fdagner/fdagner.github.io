@@ -4,8 +4,7 @@ title: "ByCS-Kursbild-Generator (beta)"
 permalink: /kursbild-generator/
 categories: [moodle]
 ---
-
-    <style>
+<style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             max-width: 1000px;
@@ -37,7 +36,6 @@ categories: [moodle]
             margin-bottom: 5px;
             font-weight: 600;
         }
-
         select, input {
             padding: 8px;
             border: 1px solid #ddd;
@@ -53,7 +51,6 @@ categories: [moodle]
        .color-inputs input {
         padding: 0px;
        }
-
         button {
             background-color: #4CAF50;
             color: white;
@@ -113,7 +110,6 @@ categories: [moodle]
             opacity: 0.5;
             pointer-events: none;
         }
-
         .hidden {
             display: none;
         }
