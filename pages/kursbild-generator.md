@@ -5,13 +5,6 @@ permalink: /kursbild-generator/
 categories: [moodle]
 ---
 <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
         h1 {
             text-align: center;
             color: #333;
@@ -114,8 +107,7 @@ categories: [moodle]
             display: none;
         }
     </style>
-<div class="container">
-    <div class="controls">
+<div class="controls">
         <div class="control-group">
             <label>Abmessungen</label>
             <div class="size-inputs">
@@ -208,7 +200,6 @@ categories: [moodle]
       Die erzeugten Bilder stehen (abhängig vom hochgeladenen Bildelement) unter der Lizenz <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank" rel="license noopener noreferrer">CC0 1.0</a>.
   </small>
     </div>
-</div>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const widthInput = document.getElementById("width");
