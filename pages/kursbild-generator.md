@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
             svgElement.setAttribute('width', "100%");
             svgElement.setAttribute('height', "100%");
             uploadedImageElement = `
-                <foreignObject 
+                <svg 
                     id="draggable-image" 
                     x="${posX}" 
                     y="${posY}"
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     style="overflow: visible; cursor: move;"
                 >
                     ${svgElement.outerHTML}
-                </foreignObject>
+                </svg>
             `;
         }
         const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
