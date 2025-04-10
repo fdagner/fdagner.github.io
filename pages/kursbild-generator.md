@@ -121,11 +121,11 @@ categories: [moodle]
             <div class="size-inputs">
                 <div>
                     <label for="width">Breite (px)</label>
-                    <input type="number" id="width" value="1200" min="800" max="2000">
+                    <input type="number" id="width" value="1800" min="800" max="2000">
                 </div>
                 <div>
                     <label for="height">Höhe (px)</label>
-                    <input type="number" id="height" value="250" min="100" max="800">
+                    <input type="number" id="height" value="360" min="100" max="800">
                 </div>
             </div>
         </div>
