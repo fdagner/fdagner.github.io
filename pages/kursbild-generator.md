@@ -200,6 +200,7 @@ categories: [Moodle]
             <option value="1800x390">Kursbild im Kurs</option>
             <option value="1800x600">Kursbild in der Übersicht</option>
             <option value="900x520">Drive Space</option>
+            <option value="600x600">Quadratisch</option>
             <option value="custom">Benutzerdefiniert</option>
         </select>
     </div>
@@ -255,9 +256,7 @@ categories: [Moodle]
             <label><input type="radio" name="pattern" value="stars"> Sternenhimmel</label>
             <label><input type="radio" name="pattern" value="lines"> Linien</label>
             <label><input type="radio" name="pattern" value="grid"> Gitter</label>
-            <label><input type="radio" name="pattern" value="crosses"> Kreuze</label>
-
-     
+            <label><input type="radio" name="pattern" value="crosses"> Kreuze</label>  
         </div>
     </div>
         <label>Animationstyp</label>
