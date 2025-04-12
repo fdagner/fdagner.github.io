@@ -303,14 +303,19 @@ categories: [Moodle]
 </div>
 
 <h3>FAQ – Häufig gestellte Fragen</h3>
+
 <details>
-    <summary>Warum sollte ich SVG verwenden und wann ist PNG sinnvoll?</summary>
-    <p>
-      SVG (Scalable Vector Graphics) bietet den Vorteil, dass die Grafiken verlustfrei skaliert werden können und somit auf allen Bildschirmgrößen gestochen scharf aussehen. Dadurch eignet sich SVG besonders gut für moderne Web-Anwendungen und responsive Designs.<br><br>
-      Lade das PNG herunter, wenn du es als Bild im Drive Space verwenden möchtest, da SVG hier nicht unterstützt wird. PNG-Dateien sind rasterbasiert und unterstützen keine Animationen.
+    <summary>Welche Grafiken eignen sich als Bildelement?</summary>
+    <p>Die Grafiken müssen im SVG-Format vorliegen. Geeignete Dateien können aus dem Repository "Imagehub" in der ByCS-Lernplattform heruntergeladen werden.
     </p>
   </details>
 <details>
+    <summary>Wie kann ich aus dem Repository "Imagehub" in der ByCS-Lernplattform SVG-Grafiken herunterladen?</summary>
+    <p>Gehe in der Lernplattform zu <a href="https://www.bycs.de/hilfe-und-tutorials/lernplattform/meine-dateien-fuer-lernende/index.html">Meine Dateien</a> und füge dort aus dem Imagehub die gewünschten Grafiken zu deinen Dateien hinzu. Nach dem Speichern kannst du Sie von dort bequem herunterladen.
+    Achtung: Das Repository steht nur bayerischen Lehrkräften zu Verfügung.
+    </p>
+  </details>
+  <details>
   <summary>Wie funktioniert die Positionierung des Bildelements?</summary>
   <p>
     - Sobald du ein SVG hochgeladen hast, erscheint im Vorschaubereich dein Bild als ein verschiebbares Element.<br>
@@ -319,6 +324,13 @@ categories: [Moodle]
     - Mit dem Button „Position zurücksetzen“ wird die Bildposition auf den Standard (zentrale Platzierung) zurückgesetzt.
   </p>
 </details>
+<details>
+    <summary>Warum sollte ich die Grafik als SVG herunterladen und wann ist PNG sinnvoll?</summary>
+    <p>
+      SVG (Scalable Vector Graphics) bietet den Vorteil, dass die Grafiken verlustfrei skaliert werden können und somit auf allen Bildschirmgrößen gestochen scharf aussehen. Dadurch eignet sich SVG besonders gut für moderne Web-Anwendungen und responsive Designs.<br><br>
+      Lade das PNG herunter, wenn du es als Bild im Drive Space verwenden möchtest, da SVG hier nicht unterstützt wird. PNG-Dateien sind rasterbasiert und unterstützen keine Animationen.
+    </p>
+  </details>
 <details>
     <summary>Unter welcher Lizenz stehen die erzeugten Grafiken?</summary>
   <p>Die erzeugten Bilder stehen (abhängig vom hochgeladenen Bildelement) unter der Lizenz <a
