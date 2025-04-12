@@ -45,7 +45,7 @@ categories: [Moodle]
         .size-inputs,
         .pattern-selection {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
             padding: 8px;
         }
@@ -163,7 +163,7 @@ categories: [Moodle]
         .tab-content {
             display: none;
             margin-bottom: 12px;
-            width: 400px;
+            width: 600px;
             }
 
         .tab-content.active {
@@ -253,6 +253,11 @@ categories: [Moodle]
             <label><input type="radio" name="pattern" value="dots"> Punkte</label>
             <label><input type="radio" name="pattern" value="dabs"> Sprenkel</label>
             <label><input type="radio" name="pattern" value="stars"> Sternenhimmel</label>
+            <label><input type="radio" name="pattern" value="lines"> Linien</label>
+            <label><input type="radio" name="pattern" value="grid"> Gitter</label>
+            <label><input type="radio" name="pattern" value="crosses"> Kreuze</label>
+
+     
         </div>
     </div>
         <label>Animationstyp</label>
@@ -640,8 +645,27 @@ categories: [Moodle]
                         shape = `<circle cx="50" cy="20" r="2" fill="${patternColor}" /><circle cx="70" cy="30" r="2" fill="${patternColor}" /><circle cx="90" cy="40" r="2" fill="${patternColor}" /><circle cx="110" cy="50" r="2" fill="${patternColor}" />`;
                     } else if (type === 'stars') {
                         shape = `<circle cx="10" cy="10" r="2" fill="${patternColor}" /><circle cx="30" cy="50" r="2" fill="${patternColor}" /><circle cx="70" cy="80" r="2" fill="${patternColor}" /><circle cx="120" cy="20" r="2" fill="${patternColor}" /><circle cx="150" cy="60" r="2" fill="${patternColor}" />`;
+                    } else if (type === 'lines') {
+                        shape = `
+                            <line x1="30" y1="0" x2="30" y2="100%" stroke="${patternColor}" stroke-width="2" />
+                            <line x1="90" y1="0" x2="90" y2="100%" stroke="${patternColor}" stroke-width="2" />
+                        `;
+                    } else if (type === 'grid') {
+                        shape = `
+                            <line x1="30" y1="0" x2="30" y2="100%" stroke="${patternColor}" stroke-width="2" />
+                            <line x1="90" y1="0" x2="90" y2="100%" stroke="${patternColor}" stroke-width="2" />
+                            <line x1="0" y1="30" x2="100%" y2="30" stroke="${patternColor}" stroke-width="2" />
+                            <line x1="0" y1="90" x2="100%" y2="90" stroke="${patternColor}" stroke-width="2" />
+                        `;
+                    } else if (type === 'crosses') {
+                        shape = `
+                            <line x1="10" y1="10" x2="20" y2="20" stroke="${patternColor}" stroke-width="2" />
+                            <line x1="20" y1="10" x2="10" y2="20" stroke="${patternColor}" stroke-width="2" />
+                            <line x1="40" y1="10" x2="50" y2="20" stroke="${patternColor}" stroke-width="2" />
+                            <line x1="50" y1="10" x2="40" y2="20" stroke="${patternColor}" stroke-width="2" />
+                        `;
                     }
-                    const size = (type === 'dots') ? 30 : (type === 'circles') ? 60 : 100;
+                    const size = (type === 'dots' || type === 'crosses') ? 30 : (type === 'circles') ? 60 : (type === 'grid' || type === 'lines') ? 60 : 100;
                     let anim = '';
                     if (animation !== 'none') {
                         if (animation === 'translate') {
