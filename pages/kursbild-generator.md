@@ -304,41 +304,6 @@ categories: [Moodle]
 
 <h3>FAQ – Häufig gestellte Fragen</h3>
 <details>
-  <summary>Was kann ich mit diesem Generator machen?</summary>
-  <p>
-    Der Generator erstellt individuelle Header-Grafiken im SVG-Format, die du anschließend als SVG oder PNG herunterladen kannst. Du kannst dabei Farben, Hintergründe, Muster und Animationen anpassen sowie ein eigenes SVG-Bildelement hochladen und positionieren.
-    Die Grafiken sind geeignet für die Kursbilder in der ByCS Lernplattform und im ByCS Drive (Spaces).
-  </p>
-</details>
-<details>
-  <summary>Wie bediene ich den Generator?</summary>
-  <p>
-    <strong>Navigation:</strong><br>
-    - Oben findest du eine Leiste mit Schaltflächen (z. B. „Größe“, „Farben“, „Muster“, „Bildelement“).<br>
-    - Klicke auf die jeweiligen Schaltflächen, um zwischen den verschiedenen Einstellungen zu wechseln.
-  </p>
-  <p>
-    <strong>Einstellungen anpassen:</strong><br>
-    - Unter "Größe" wählst du die gewünschte Bildgröße oder legst benutzerdefinierte Maße fest.<br>
-    - Im Bereich "Farben" kannst du die Haupt- und Nebenfarben sowie den Farbverlauf auswählen.<br>
-    - Unter "Muster" stellst du das gewünschte Hintergrundmuster ein und kannst gegebenenfalls Animationen aktivieren.<br>
-    - Im Tab "Bildelement" lädst du ein SVG-Bild hoch und kannst es per Drag & Drop verschieben und in der Größe anpassen.
-  </p>
-  <p>
-    <strong>Vorschau und Export:</strong><br>
-    - Im Vorschaubereich siehst du, wie deine Grafik aktuell aussieht.<br>
-    - Mit dem Button „Grafik aktualisieren“ wird die Vorschau an deine aktuellen Einstellungen angepasst.<br>
-    - Über die Download-Buttons kannst du deine Grafik als SVG oder PNG speichern.
-  </p>
-</details>
-<details>
-  <summary>Welche Dateiformate werden unterstützt?</summary>
-  <p>
-    - <strong>Hochladen:</strong> Nur SVG-Dateien können als Bild-Elemente verwendet werden.<br>
-    - <strong>Herunterladen:</strong> Du kannst deine Grafik sowohl als SVG als auch als PNG herunterladen.
-  </p>
-</details>
-<details>
     <summary>Warum sollte ich SVG verwenden und wann ist PNG sinnvoll?</summary>
     <p>
       SVG (Scalable Vector Graphics) bietet den Vorteil, dass die Grafiken verlustfrei skaliert werden können und somit auf allen Bildschirmgrößen gestochen scharf aussehen. Dadurch eignet sich SVG besonders gut für moderne Web-Anwendungen und responsive Designs.<br><br>
@@ -352,13 +317,6 @@ categories: [Moodle]
     - Du kannst das Bild mit der Maus oder per Finger (auf Touchscreens) verschieben.<br>
     - Die Bildgröße lässt sich über den Schieberegler einstellen.<br>
     - Mit dem Button „Position zurücksetzen“ wird die Bildposition auf den Standard (zentrale Platzierung) zurückgesetzt.
-  </p>
-</details>
-<details>
-  <summary>Was tun, wenn ich Probleme habe?</summary>
-  <p>
-    - Prüfe, ob du das richtige Dateiformat (SVG) hochlädst.<br>
-    - Falls die Grafik nicht wie erwartet angezeigt wird, klicke auf „Aktualisieren“, um die neuesten Änderungen zu laden.
   </p>
 </details>
 <details>
