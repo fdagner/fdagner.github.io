@@ -59,7 +59,7 @@ header_pages:
         url: /csv-moodle-konverter/
       - title: Moodle-Datenbank-Aktivität-Generator
         url: /moodle-datenbank-generator/
-      - title: ByCS-Kursbild-Generator
+      - title: Kursbild-Designer
         url: /kursbild-generator/
   - title: "Anwendungen"
     children:
