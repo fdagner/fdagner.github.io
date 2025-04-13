@@ -300,7 +300,7 @@ categories: [Moodle]
         <div id="text-controls" class="hidden">
             <div class="control-group">
                 <label for="text-size">Textgröße:</label>
-                <input type="range" id="text-size" min="10" max="200" value="40">
+                <input type="range" id="text-size" min="10" max="400" value="40">
             </div>
             <div>
                 <label for="text-color">Textfarbe</label>
