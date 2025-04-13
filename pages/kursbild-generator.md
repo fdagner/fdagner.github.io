@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "ByCS-Kursbild-Generator"
+title: "Kursbild-Designer"
 permalink: /kursbild-generator/
 categories: [Moodle]
 ---
