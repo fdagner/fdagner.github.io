@@ -403,7 +403,22 @@ categories: [Moodle]
                 heightInput.addEventListener("change", () => {
                     validateInput(heightInput, heightMin, heightMax);
                 });
+            // Funktion zur Validierung von Text (entfernt HTML-Tags)
+            function validateTextInput(input) {
+                let value = input.value;
+                // Entfernt alle HTML-Tags aus dem Text
+                const sanitizedValue = value.replace(/<\/?[^>]+(>|$)/g, "");
+                // Setzt den bereinigten Text zurück, falls HTML-Tags vorhanden sind
+                if (value !== sanitizedValue) {
+                    input.value = sanitizedValue;
+                    alert("HTML-Tags sind nicht erlaubt! Nur reiner Text ist zulässig.");
+                }
+            }
+            const textInput = document.getElementById("text-input");
+            textInput.addEventListener("blur", () => { // 'blur' wird verwendet, wenn das Eingabefeld verlassen wird
+                validateTextInput(textInput);
             });
+             });
         </script>
    <script>
  document.addEventListener('DOMContentLoaded', function () {
