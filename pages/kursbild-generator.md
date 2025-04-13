@@ -3,6 +3,7 @@ layout: page
 title: "Kursbild-Designer"
 permalink: /kursbild-generator/
 categories: [Moodle]
+image: "/assets/images/2025-04-06-kursbild.png"
 ---
 <style>
         h1 {
