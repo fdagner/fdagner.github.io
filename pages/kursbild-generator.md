@@ -341,7 +341,7 @@ categories: [Moodle]
 <h3>FAQ – Häufig gestellte Fragen</h3>
 <details>
     <summary>Welche Grafiken eignen sich als Bildelement?</summary>
-    <p>Die Grafiken müssen im SVG-Format vorliegen. Geeignete Dateien können aus dem Repository "Imagehub" in der ByCS-Lernplattform heruntergeladen werden.
+    <p>Die Grafiken müssen im SVG-Format vorliegen. Geeignete Dateien kannst du aus dem Repository "Imagehub" in der ByCS-Lernplattform herunterladen.
     </p>
   </details>
 <details>
@@ -888,4 +888,5 @@ categories: [Moodle]
     document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".tab-button").click();
     });
+
 </script>
