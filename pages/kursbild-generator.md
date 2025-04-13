@@ -352,12 +352,12 @@ categories: [Moodle]
     </p>
   </details>
   <details>
-  <summary>Wie funktioniert die Positionierung des Bildelements?</summary>
+  <summary>Wie funktioniert die Positionierung des Bild- und Textelements?</summary>
   <p>
     - Sobald du ein SVG hochgeladen hast, erscheint im Vorschaubereich dein Bild als ein verschiebbares Element.<br>
-    - Du kannst das Bild mit der Maus oder per Finger (auf Touchscreens) verschieben.<br>
-    - Die Bildgröße lässt sich über den Schieberegler einstellen.<br>
-    - Mit dem Button „Position zurücksetzen“ wird die Bildposition auf den Standard (zentrale Platzierung) zurückgesetzt.
+    - Du kannst das Bild und den Text mit der Maus oder per Finger (auf Touchscreens) verschieben.<br>
+    - Die Bild- und Textgröße lässt sich über den Schieberegler einstellen.<br>
+    - Mit dem Button „Position zurücksetzen“ wird die Bild- oder Textposition auf den Standard (zentrale Platzierung) zurückgesetzt.
   </p>
 </details>
 <details>
