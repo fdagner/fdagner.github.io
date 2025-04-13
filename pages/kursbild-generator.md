@@ -41,13 +41,31 @@ categories: [Moodle]
             border-radius: 4px;
         }
 
-        .color-inputs,
+                .color-inputs,
         .size-inputs,
         .pattern-selection {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             padding: 8px;
+        }
+
+        /* Für mittlere Bildschirme: nur zwei Spalten */
+        @media (max-width: 768px) {
+            .color-inputs,
+            .size-inputs,
+            .pattern-selection {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Für kleine Bildschirme: eine Spalte */
+        @media (max-width: 480px) {
+            .color-inputs,
+            .size-inputs,
+            .pattern-selection {
+                grid-template-columns: 1fr;
+            }
         }
 
         .color-inputs input {
@@ -67,16 +85,6 @@ categories: [Moodle]
 
         button:hover {
             background-color: #45a049;
-        }
-
-        .preview {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-bottom: 12px;
-            text-align: center;
         }
 
         #svg-container {
@@ -133,13 +141,34 @@ categories: [Moodle]
             display: none;
         }
 
-        /* Style für die Navigation */
+                /* Style für die Navigation */
         .navigation {
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin-bottom: 20px;
             padding: 10px;
             border-bottom: dashed 2px #ccc;
+        }
+
+        /* Tablet: 2 Elemente pro Zeile */
+        @media (max-width: 768px) {
+            .navigation {
+                justify-content: space-between;
+            }
+
+            .navigation > * {
+                flex: 0 0 48%;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Smartphone: 1 Element pro Zeile */
+        @media (max-width: 480px) {
+            .navigation > * {
+                flex: 0 0 100%;
+            }
         }
 
         .tab-button {
@@ -184,7 +213,7 @@ categories: [Moodle]
             summary::-webkit-details-marker {
             margin-right: 10px;
             }
-    </style>
+</style>
 <div class="controls">
 <div class="navigation">
     <button class="tab-button" onclick="openTab(event, 'options')">Größe</button>
@@ -305,7 +334,7 @@ categories: [Moodle]
         <button id="generate-btn">Aktualisieren</button>
     </div>
 </div>
-
+<br><br>
 <h3>FAQ – Häufig gestellte Fragen</h3>
 
 <details>
