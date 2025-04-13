@@ -260,9 +260,8 @@ categories: [Moodle]
             <option value="none">Ohne</option>
             <option value="translate">Bewegung links nach rechts</option>
             <option value="translate2">Bewegung oben nach unten</option>
-            <option value="rotate">Rotation</option>
             <option value="fade">Ausblenden</option>
-            <option value="diagonal">Diagonal</option>
+
         </select>
 <br><br>
 <label>Animationsgeschwindigkeit</label>
@@ -779,26 +778,35 @@ categories: [Moodle]
             `;
         }
         const size = (type === 'dots' || type === 'crosses') ? 30 : (type === 'circles') ? 60 : (type === 'grid' || type === 'lines') ? 60 : 100;
-        let anim = '';
-        if (animation !== 'none') {
-            if (animation === 'translate') {
-                anim = `<animateTransform attributeName="patternTransform" type="translate" values="0,0;${size * 2},0" dur="${duration_translate}s" repeatCount="indefinite" />`;
-            } else if (animation === 'translate2') {
-                anim = `<animateTransform attributeName="patternTransform" type="translate" values="0,0;0,${size * 2}" dur="${duration_translate}s" repeatCount="indefinite" />`;
-            } else if (animation === 'rotate') {
-                anim = `<animateTransform attributeName="patternTransform" type="rotate" values="0;360" dur="${duration_rotate}s" repeatCount="indefinite" />`;
-            } else if (animation === 'fade') {
-                anim = `<animate attributeName="opacity" values="1;0.1;1" dur="${duration_fade}s" repeatCount="indefinite" />`;
-            } else if (animation === 'diagonal') {
-                anim = `<animateTransform attributeName="patternTransform" type="translate" values="0,0;${size * 2},${size * 2}" dur="${duration_translate}s" repeatCount="indefinite" />`;
-            }
+    let anim = '';
+    let patternContent = shape;
+    // Animationen werden auf ein <g>-Element angewendet, nicht auf patternTransform
+    if (animation !== 'none') {
+        if (animation === 'translate') {
+            anim = `<animateTransform attributeName="transform" type="translate" values="-${size},0;0,0;" dur="${duration_translate}s" repeatCount="indefinite" />`;
+        } else if (animation === 'translate2') {
+             anim = `<animateTransform attributeName="transform" type="translate" from="0 0" to="0 ${size}" dur="${duration_translate}s" repeatCount="indefinite" />`;
+        } else if (animation === 'fade') {
+            anim = `<animate attributeName="opacity" values="1;0.1;1" dur="${duration_fade}s" repeatCount="indefinite" />`;
         }
-        let patternContent = `${anim}${shape}`;
-        if (animation === 'fade') {
-            patternContent = `<g>${patternContent}</g>`;
+        // Umhüllen der Formen mit einem <g>-Element, das die Animation trägt
+        patternContent = `<g>${anim}${shape}</g>`;
+        if (animation === 'translate2') {
+            patternContent = `
+                <g>
+                    ${anim}
+                    <g>${shape}</g>
+                    <g transform="translate(0, -${size})">${shape}</g>
+                </g>
+            `;
         }
-        return `<pattern id="${type}-pattern" patternUnits="userSpaceOnUse" width="${size * 2}" height="${size}">${patternContent}</pattern>`;
     }
+    return `
+        <pattern id="${type}-pattern" patternUnits="userSpaceOnUse" width="${size}" height="${size}">
+            ${patternContent}
+        </pattern>
+    `;
+}
     function downloadSVG() {
         const svg = svgContainer.innerHTML;
         const blob = new Blob([svg], { type: 'image/svg+xml' });
