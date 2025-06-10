@@ -11,7 +11,7 @@ categories:
 ### Portainer installieren
 Obwohl Synologys *Container Manager* (ehemals Docker) eine solide Lösung ist und ich meine bisherigen Docker-Anwendungen darüber installiert habe, bietet *Portainer* eine benutzerfreundlichere und schnellere Oberfläche zur Verwaltung von Docker-Containern. *Portainer* ermöglicht es, Container, Stacks und Images intuitiv zu organisieren, was die Installation und Wartung von Anwendungen erheblich erleichtert
 
-*Portainer* ist nicht standardmäßig auf einem Synology NAS vorhanden und muss zuerst installiert werden. Mit der [Anleitung von Marius Hosting](https://mariushosting.com/synology-30-second-portainer-install-using-task-scheduler-docker/) ist es sehr schnell einsatzbereit.
+*Portainer* ist nicht standardmäßig auf einem *Synology NAS* vorhanden und muss zuerst installiert werden. Mit der [Anleitung von Marius Hosting](https://mariushosting.com/synology-30-second-portainer-install-using-task-scheduler-docker/) ist es sehr schnell einsatzbereit.
 
 ### Moodle installieren
 Die [Installation](https://mariushosting.com/how-to-install-moodle-on-your-synology-nas/) von Moodle lief grundsätzlich reibungslos. Ich habe den DDNS-Teil übersprungen, da ich Moodle vorerst nur im lokalen Netzwerk nutze. 
@@ -53,7 +53,7 @@ Daher habe ich das deutsche Sprachpaket (`de_DE.UTF-8`)  mit der Kommandozeile i
 - Sicherheit: Ich nutze die NAS und Moodle nur lokal, daher habe ich auf die Erreichbarkeit von außen verzichtet. Aber vielleicht realisiere ich das in Zukunft über VPN.
 
 ### Ausblick
-Moodle auf dem Synology NAS zu aktualisieren, mehrere Images parallel zu nutzen und Änderungen zu erhalten könnte mit *Portainer* erstaunlich einfach sein. Updates sind unkompliziert: In *Portainer* müsste ich das neueste bitnami/moodle:latest-Image ziehen,den alten Container umbenennen und einen neuen Container mit den gleichen Einstellungen erstellen. Ich sollte dann auch separate Stacks für verschiedene Moodle-Versionen erstellen können. Mit Code Server und weiteren Docker-Tools ist eine rudimentäre Dev-Umgebung auf dem NAS in Reichweite.
+*Moodle* auf dem *Synology NAS* zu aktualisieren, mehrere Images parallel zu nutzen und Änderungen zu erhalten könnte mit *Portainer* erstaunlich einfach sein. Updates sind unkompliziert: In *Portainer* müsste ich das neueste bitnami/moodle:latest-Image ziehen,den alten Container umbenennen und einen neuen Container mit den gleichen Einstellungen erstellen. Ich sollte dann auch separate Stacks für verschiedene Moodle-Versionen erstellen können. Mit *Code Server* und weiteren Docker-Tools ist eine rudimentäre Dev-Umgebung auf dem NAS in Reichweite.
 
 
 
