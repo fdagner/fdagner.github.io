@@ -69,6 +69,8 @@ header_pages:
         url: /2025/01/01/teampunkte-erfassen/
       - title: Python Web Editor
         url: /python_web_editor/
+      - title: Klassen-Mixer
+        url: /2025/06/12/klassenmixer/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
