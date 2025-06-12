@@ -4,7 +4,7 @@ title: KlassenMixer
 date: 2025-06-12T16:30:00
 image: "/assets/images/2025-06-12-klassenmixer.png"
 categories:
-  - moodle
+  - Organisation
 ---
 **In manchen schulorganisatorischen Situationen müssen Schülern zufällige Nummern zugewiesen werden – sei es für Sitzpläne, Referate, Prüfungen oder Tests. Oft soll diese Nummerierung geordnet nach Klassen, aber innerhalb der Klassen zufällig erfolgen. Mit [KlassenMixer](https://oer.fdagner.de/klassenmixer/) lässt sich das nun im Browser umsetzen.**
 
