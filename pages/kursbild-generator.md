@@ -275,7 +275,6 @@ image: "/assets/images/2025-04-06-kursbild.png"
 <div class="tab-content" id="image">
     <div class="control-group">
     <div id="openmoji-container" class="emoji-container">
-   <h3>OpenMoji-Grafiken</h3>
    <div id="emoji-controls"></div>
    <div id="emoji-grid" class="emoji-grid"></div>
 </div>
