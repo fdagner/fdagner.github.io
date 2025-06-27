@@ -13,7 +13,7 @@ Ein SCORM-Paket ist im Grunde nur ein ZIP-Archiv mit HTML-Dateien, einer `imsman
 
 
 ### So funktioniert's
-Ein SCORM-Paket ist technisch gesehen nur ein ZIP-Archiv mit folgendem Aufbau:
+Ein SCORM-Paket hat folgenden Aufbau:
 
 ```
 /deinspiel.html
