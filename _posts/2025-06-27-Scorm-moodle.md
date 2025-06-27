@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SCORM für Moodle erstellen (experimentell)"
-date: 2025-06-27T08:00:00
+date: 2025-06-27T21:00:00
 image: "/assets/images/2025-06-27_scorm.png"
 categories:
   - Moodle
@@ -13,7 +13,6 @@ Ein SCORM-Paket ist im Grunde nur ein ZIP-Archiv mit HTML-Dateien, einer `imsman
 
 
 ### So funktioniert's
-
 Ein SCORM-Paket ist technisch gesehen nur ein ZIP-Archiv mit folgendem Aufbau:
 
 ```
@@ -57,7 +56,7 @@ function spielBeenden(punkte) {
 }
 ```
 
-🔗 **GitHub-Repository**  
+### GitHub-Repository
 👉 [https://github.com/fdagner/zahlen_raten_scorm](https://github.com/fdagner/zahlen_raten_scorm)
 
 Dieses Repository enthält ein Beispiel für ein SCORM-kompatibles Spiel mit Punkteübertragung nach Moodle. In den Einstellungen in Moodle sollte man "Beste Bewertung" auf den Wert 10 stellen.
