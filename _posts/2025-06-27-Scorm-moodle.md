@@ -16,7 +16,7 @@ Ein SCORM-Paket ist im Grunde nur ein ZIP-Archiv mit HTML-Dateien, einer `imsman
 Ein SCORM-Paket hat folgenden Aufbau:
 
 ```
-/deinspiel.html
+/index.html
 /scormapiwrapper.js
 /imsmanifest.xml
 ```
