@@ -23,7 +23,7 @@ Ein SCORM-Paket hat folgenden Aufbau:
 
 Die notwendigen Bestandteile:
 
-1. Deine HTML-Datei mit dem Spiel oder Inhalt  
+1. HTML-Datei mit dem Spiel oder Inhalt  
 2. JavaScript-Code, der mit der SCORM-API kommuniziert  
 3. Eine imsmanifest.xml, die SCORM und Moodle die Struktur erklärt  
 
