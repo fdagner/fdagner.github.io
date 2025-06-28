@@ -25,7 +25,7 @@ Dieses Repository enthält ein Beispiel für ein SCORM-kompatibles Spiel mit Pun
 [![Screenshot Scorm](/assets/images/2025-06-27_scorm.png)](/assets/images/2025-06-27_scorm.png){: style="width: 100%;max-width: 800px;display: block; margin: 0 auto"}
 
 ### Eigenes Projekt anpassen
-Wenn man sein eigenes SCORM-Spiel erstellen will, solltest man in `scormdriver.js` die `setScore`-Funktion so anpassen:
+Wenn man sein eigenes SCORM-Paket erstellen will, sollte man in `scormdriver.js` die `setScore`-Funktion so anpassen:
 
 ```js
 setScore: function(score, maxScore = 10) {
