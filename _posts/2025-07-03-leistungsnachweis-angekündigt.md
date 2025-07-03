@@ -23,7 +23,7 @@ Der Leistungsnachweis wurde mithilfe der Aktivität „Test“ durchgeführt und
 - Hauptaufgabe: Eine kurze Programmieraufgabe, bei der ein Python-Skript geschrieben werden sollte.
 - Sortieraufgabe: Eine Reihenfolge von Programmzeilen musste korrekt angeordnet werden.
 - Fehler finden: In einem kleinen Codebeispiel sollten typische Fehler identifiziert werden (Multiple Choice).
-- Fachbegriffe anwenden: Verständnisfragen zu zentralen Begriffen der Codierung – ebenfalls im Multiple-Choice-Format.
+- Grundwissen: Verständnisfragen zu zentralen Begriffen der Codierung – ebenfalls im Multiple-Choice-Format.
 
 Die Fragen stammten aus einem Fragenpool, wodurch jeder Schüler individuelle Aufgaben erhielt – bei gleichbleibender Struktur und Anforderungsniveau. Zur Vorbereitung stand ein Demo-Test bereit, der Aufbau und Aufgabentypen vorab transparent machte und zum Üben genutzt werden konnte. Während des eigentlichen Tests hatten die Lernenden Zugriff auf alle Kursinhalte sowie eine in den Kurs integrierte Python-Umgebung zur Bearbeitung und Überprüfung von Code. Der begrenzende Faktor war dabei die Zeitvorgabe von 20 Minuten, die eine zügige, konzentrierte Arbeitsweise erforderte.
 
