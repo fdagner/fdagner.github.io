@@ -66,11 +66,18 @@ header_pages:
       - title: Didaktischer Schieberegler
         url: /didaktischer-schieberegler/
       - title: Teampunkte
-        url: /2025/01/01/teampunkte-erfassen/
+        url: /teampunkte/
       - title: Python Web Editor
         url: /python_web_editor/
+  - title: "Schulleitung"
+    children:
+      - title: Sportkoppeln
+        url: /sportkoppeln/
+      - title: Klassenkonferenzen
+        url: /klassenkonferenzen_planen/
       - title: Klassen-Mixer
-        url: /2025/06/12/klassenmixer/
+        url: /klassenmixer/
+    
 
 # Exclude from processing.
 # The following items will not be processed, by default.
