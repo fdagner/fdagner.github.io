@@ -34,7 +34,7 @@ plugins:
 - jekyll-archives
 - jekyll-paginate
 - jekyll-seo-tag
-paginate: 10 # Anzahl der Beiträge pro Seite
+paginate: 5 # Anzahl der Beiträge pro Seite
 paginate_path: "/page:num/"
 
 jekyll-archives:
@@ -44,39 +44,39 @@ jekyll-archives:
   permalinks:
     category: '/category/:name/'
 
-header_pages:
-  - title: "OER"
-    children:
-      - title: BwR-Helfer
-        url: https://oer.fdagner.de/bwr/
-      - title: Klimadiagramme
-        url: https://oer.fdagner.de/klimadiagramme/
-      - title: Farbmodelle mischen
-        url: https://oer.fdagner.de/color-models/
-  - title: "Moodle"
-    children:
-      - title: CSV-Moodle-Konverter
-        url: /csv-moodle-konverter/
-      - title: Moodle-Datenbank-Aktivität-Generator
-        url: /moodle-datenbank-generator/
-      - title: Kursbild-Designer
-        url: /kursbild-generator/
-  - title: "Anwendungen"
-    children:
-      - title: Didaktischer Schieberegler
-        url: /didaktischer-schieberegler/
-      - title: Teampunkte
-        url: /teampunkte/
-      - title: Python Web Editor
-        url: /python_web_editor/
-  - title: "Schulleitung"
-    children:
-      - title: Sportkoppeln
-        url: /sportkoppeln/
-      - title: Klassenkonferenzen
-        url: /klassenkonferenzen_planen/
-      - title: Klassen-Mixer
-        url: /klassenmixer/
+# header_pages:
+#   - title: "OER"
+#     children:
+#       - title: BwR-Helfer
+#         url: https://oer.fdagner.de/bwr/
+#       - title: Klimadiagramme
+#         url: https://oer.fdagner.de/klimadiagramme/
+#       - title: Farbmodelle mischen
+#         url: https://oer.fdagner.de/color-models/
+#   - title: "Moodle"
+#     children:
+#       - title: CSV-Moodle-Konverter
+#         url: /csv-moodle-konverter/
+#       - title: Moodle-Datenbank-Aktivität-Generator
+#         url: /moodle-datenbank-generator/
+#       - title: Kursbild-Designer
+#         url: /kursbild-generator/
+#   - title: "Anwendungen"
+#     children:
+#       - title: Didaktischer Schieberegler
+#         url: /didaktischer-schieberegler/
+#       - title: Teampunkte
+#         url: /teampunkte/
+#       - title: Python Web Editor
+#         url: /python_web_editor/
+#   - title: "Schulleitung"
+#     children:
+#       - title: Sportkoppeln
+#         url: /sportkoppeln/
+#       - title: Klassenkonferenzen
+#         url: /klassenkonferenzen_planen/
+#       - title: Klassen-Mixer
+#         url: /klassenmixer/
     
 
 # Exclude from processing.

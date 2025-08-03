@@ -123,3 +123,110 @@
   math {
     font-size: 1.2rem;
   }
+
+  .tool-cards {
+  margin: 2rem 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.post-link {
+  display: block;
+  font-size: 20px;
+}
+
+.tool-tabs {
+  margin: 2rem 0;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-button.active {
+  background-color: #007acc;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

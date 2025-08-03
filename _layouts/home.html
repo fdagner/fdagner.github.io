@@ -7,10 +7,92 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {% endif %}
 
+
+<div class="tool-tabs">
+  <h2>Digitale Hilfen</h2>
+  
+  <div class="tab-buttons">
+    <button class="tab-button active" data-tab="schulleitung">Schulleitung</button>
+    <button class="tab-button" data-tab="anwendungen">Anwendungen</button>
+    <button class="tab-button" data-tab="oer">OER</button>
+    <button class="tab-button" data-tab="moodle">Moodle</button>
+  </div>
+
+  <div class="tab-content active" id="schulleitung">
+    <div class="cards-container">
+      <div class="card">
+        <h3><a href="/sportkoppeln/">Sportkoppeln</a></h3>
+        <p>Plane geschlechtergetrennte Koppeln für den Sportunterricht mit automatischer Berechnung.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/klassenkonferenzen_planen/">Klassenkonferenzen</a></h3>
+        <p>Erstelle automatisch optimierte Zeitpläne für Klassenkonferenzen.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/klassenmixer/">Klassen-Mixer</a></h3>
+        <p>Ordne Schülern zufällige Nummern zu – z. B. für Sitzpläne, Referate oder Prüfungspläne.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="anwendungen">
+    <div class="cards-container">
+      <div class="card">
+        <h3><a href="/didaktischer-schieberegler/">Didaktischer Schieberegler</a></h3>
+        <p>Visualisiere didaktische Entscheidungen zwischen Strukturierung und Selbststeuerung.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/teampunkte/">Teampunkte</a></h3>
+        <p>Vergib Teampunkte an Gruppen im Unterricht – live mitverfolgbar.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/python_web_editor/">Python Web Editor</a></h3>
+        <p>Online-Editor für Python-Code – auch mit Brython-Unterstützung im Browser.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="oer">
+    <div class="cards-container">
+      <div class="card">
+        <h3><a href="https://oer.fdagner.de/bwr/">BwR-Helfer</a></h3>
+        <p>Belege, Aufgaben und Vorlagen für den BwR-UNterricht erstellen.</p>
+       
+      </div>
+      <div class="card">
+        <h3><a href="https://oer.fdagner.de/klimadiagramme/">Klimadiagramme</a></h3>
+        <p>Freie Klimadiagramme für den Unterricht</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://oer.fdagner.de/color-models/">Farbmodelle mischen</a></h3>
+        <p>Farbmodelle interaktiv</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="moodle">
+    <div class="cards-container">
+      <div class="card">
+        <h3><a href="/csv-moodle-konverter/">CSV-Moodle-Konverter</a></h3>
+         <p>Mit dem Konverter kann man CSV-Daten in verschiedene Moodle-Import-Formate umwandeln. </p>
+      </div>
+      <div class="card">
+        <h3><a href="/moodle-datenbank-generator/">Moodle-Datenbank-Aktivität-Generator</a></h3>
+         <p>Moodle-Datenbankvorlagen erstellen.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/kursbild-generator/">Kursbild-Designer</a></h3>
+        <p>Kursbilder für ByCS Lernplattform oder ByCS Drive erstellen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   {{ content }}
 
   {%- if paginator.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Beiträge" }}</h2>
+    <h2>{{ page.list_title | default: "Beiträge" }}</h2>
     <ul class="post-list">
       {%- for post in paginator.posts -%}
       <li>

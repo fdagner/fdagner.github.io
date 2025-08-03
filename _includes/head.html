@@ -4,7 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Blogbeiträge zu Schule, Moodle und mehr">
   {%- seo -%}
+  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
