@@ -176,13 +176,13 @@
   margin: 2rem 0;
 }
 
-.tab-buttons {
+.tab-buttons-homepage {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.tab-button {
+.tab-button-homepage {
   padding: 0.5rem 1rem;
   background-color: #eee;
   border: none;
@@ -191,16 +191,16 @@
   font-weight: bold;
 }
 
-.tab-button.active {
+.tab-button-homepage.active {
   background-color: #007acc;
   color: white;
 }
 
-.tab-content {
+.tab-content-homepage {
   display: none;
 }
 
-.tab-content.active {
+.tab-content-homepage.active {
   display: block;
 }
 

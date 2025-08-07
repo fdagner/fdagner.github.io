@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const tabButtons = document.querySelectorAll(".tab-button");
-  const tabContents = document.querySelectorAll(".tab-content");
+  const tabButtons = document.querySelectorAll(".tab-button-homepage");
+  const tabContents = document.querySelectorAll(".tab-content-homepage");
 
   tabButtons.forEach(button => {
     button.addEventListener("click", () => {
