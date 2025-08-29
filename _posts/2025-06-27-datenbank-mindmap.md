@@ -57,7 +57,7 @@ Wenn man auf einen Knoten der SVG klickt, erscheint ein kleines Menü (Overlay) 
 [![Screenshot Mindmap Overlay](/assets/images/2025-08-29_mindmap4.png)](/assets/images/2025-08-29_mindmap4.png){: style="width: 75%;max-width: 800px;display: block; margin: 0 auto"}
 
 
-### Listenmdodus
+### Listenmodus
 
 Die Listenfelder sind die textbasierte Ansicht der Mindmap, die durch Klicken auf das Listensymbol aktiviert werden. Sie zeigen alle Knoten als bearbeitbare Eingabefelder an. Die Knoten sind hierarchisch angeordnet: Der Hauptknoten steht oben, Unterthemen sind eingerückt, je nach ihrer Ebene. Das hat einige Vorteile:
 - Knoten können schneller erstellt und bearbeitet werden.
