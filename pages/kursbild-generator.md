@@ -442,7 +442,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             </div>
         </div>
     </div>
-    <div class="preview">
+<div class="preview">
         <h3>Vorschau</h3>
         <div id="svg-container"></div>
         <div class="download-section">
@@ -532,7 +532,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             <button id="modal-delete">Löschen</button>
         </div>
     </div>
-    <script>
+<script>
         document.addEventListener("DOMContentLoaded", () => {
             const widthInput = document.getElementById("width");
             const heightInput = document.getElementById("height");
@@ -1446,4 +1446,3 @@ image: "/assets/images/2025-04-06-kursbild.png"
             document.querySelector(".tab-button").click();
         });
     </script>
-    
