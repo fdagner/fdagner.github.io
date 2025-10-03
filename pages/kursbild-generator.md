@@ -168,7 +168,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             width: 600px;
         }
         .tab-content.active {
-            display: block;
+            display: contents;
         }
         details {
             margin-bottom: 1em;
