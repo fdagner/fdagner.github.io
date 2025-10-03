@@ -379,7 +379,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             <label>Bild-Elemente hochladen (SVG)</label>
             <input type="file" id="image-upload" accept="image/svg+xml" multiple /><br /><br />
             <p>
-                Klicke auf ein hochgeladenes Bild in der Vorschau, um es zu bearbeiten
+                Klicke auf ein hochgeladenes Bild, um es zu bearbeiten.
                 Positioniere per Drag & Drop.
             </p>
         </div>
