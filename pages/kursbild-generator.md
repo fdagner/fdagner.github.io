@@ -6,14 +6,6 @@ categories: [Moodle]
 image: "/assets/images/2025-04-06-kursbild.png"
 ---
 <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
         h1 {
             text-align: center;
             color: #333;
@@ -33,7 +25,6 @@ image: "/assets/images/2025-04-06-kursbild.png"
         .control-group {
             margin-bottom: 15px;
         }
-
         label {
             display: block;
             margin-bottom: 5px;
@@ -55,7 +46,6 @@ image: "/assets/images/2025-04-06-kursbild.png"
         }
         /* Für mittlere Bildschirme: nur zwei Spalten */
         @media (max-width: 768px) {
-
             .color-inputs,
             .size-inputs,
             .pattern-selection {
@@ -150,7 +140,6 @@ image: "/assets/images/2025-04-06-kursbild.png"
                 margin-bottom: 10px;
             }
         }
-
         /* Smartphone: 1 Element pro Zeile */
         @media (max-width: 480px) {
             .navigation>* {
@@ -178,7 +167,6 @@ image: "/assets/images/2025-04-06-kursbild.png"
             margin-bottom: 12px;
             width: 600px;
         }
-
         .tab-content.active {
             display: block;
         }
@@ -239,7 +227,6 @@ image: "/assets/images/2025-04-06-kursbild.png"
         .modal-content input[type="range"] {
             width: 100%;
         }
-
         .modal-content button {
             margin: 5px;
         }
@@ -249,7 +236,6 @@ image: "/assets/images/2025-04-06-kursbild.png"
         #modal-delete:hover {
             background-color: #d32f2f;
         }
-
         .modal-content button {
             margin: 5px;
             padding: 8px 12px;
@@ -284,7 +270,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             background-color: #7b1fa2;
         }
     </style>
- <div class="controls">
+<div class="controls">
         <div class="navigation">
             <button class="tab-button" onclick="openTab(event, 'options')">
                 Größe
@@ -302,7 +288,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
                 Text
             </button>
         </div>
-        <div class="tab-content" id="options">
+<div class="tab-content" id="options">
             <div class="control-group">
                 <label for="preset">Optimiert für</label>
                 <select id="preset">
@@ -354,7 +340,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
                 </div>
             </div>
         </div>
-        <div class="tab-content" id="pattern">
+<div class="tab-content" id="pattern">
             <div class="control-group">
                 <label>Hintergundmuster</label>
                 <div class="pattern-selection" id="pattern-selection">
@@ -389,7 +375,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
                 <option value="fast">Schnell</option>
             </select>
         </div>
-        <div class="tab-content" id="image">
+<div class="tab-content" id="image">
             <label>Bild-Elemente hochladen (SVG)</label>
             <input type="file" id="image-upload" accept="image/svg+xml" multiple /><br /><br />
             <p>
@@ -397,7 +383,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
                 Positioniere per Drag & Drop.
             </p>
         </div>
-        <div class="tab-content" id="text">
+<div class="tab-content" id="text">
             <div class="control-group">
                 <div class="control-group">
                     <label for="text-input">Text hinzufügen:</label>
@@ -451,16 +437,16 @@ image: "/assets/images/2025-04-06-kursbild.png"
             <button id="generate-btn">Aktualisieren</button>
         </div>
     </div>
-    <br /><br />
-    <h3>FAQ – Häufig gestellte Fragen</h3>
-    <details>
+<br /><br />
+<h3>FAQ – Häufig gestellte Fragen</h3>
+<details>
         <summary>Welche Grafiken eignen sich als Bildelemente?</summary>
         <p>
             Die Grafiken müssen im SVG-Format vorliegen. Geeignete Dateien kannst du
             aus dem Repository "Imagehub" in der ByCS-Lernplattform herunterladen.
         </p>
     </details>
-    <details>
+<details>
         <summary>
             Wie kann ich aus dem Repository "Imagehub" in der ByCS-Lernplattform
             SVG-Grafiken herunterladen?
@@ -475,7 +461,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             zu Verfügung.
         </p>
     </details>
-    <details>
+<details>
         <summary>
             Wie funktioniert die Positionierung des Bild- und Textelements?
         </summary>
@@ -490,7 +476,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             Textposition auf den Standard (zentrale Platzierung) zurückgesetzt.
         </p>
     </details>
-    <details>
+<details>
         <summary>
             Warum sollte ich die Grafik als SVG herunterladen und wann ist PNG
             sinnvoll?
@@ -505,7 +491,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             rasterbasiert und unterstützen keine Animationen.
         </p>
     </details>
-    <details>
+<details>
         <summary>Unter welcher Lizenz stehen die erzeugten Grafiken?</summary>
         <p>
             Die erzeugten Bilder stehen (abhängig von den hochgeladenen Bildelementen)
@@ -513,9 +499,9 @@ image: "/assets/images/2025-04-06-kursbild.png"
             <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank"
                 rel="license noopener noreferrer">CC0 1.0</a>.
         </p>
-    </details>
-    <!-- Modal für Bildbearbeitung -->
-    <div id="imageModal" class="modal">
+</details>
+<!-- Modal für Bildbearbeitung -->
+<div id="imageModal" class="modal">
         <div class="modal-content">
             <button class="close" id="modal-close">&times;</button>
             <h3>Bild bearbeiten</h3>
@@ -533,7 +519,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
         </div>
     </div>
 <script>
-        document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
             const widthInput = document.getElementById("width");
             const heightInput = document.getElementById("height");
             // Wertebereich
@@ -581,7 +567,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             });
         });
     </script>
-    <script>
+<script>
         function escapeRegExp(string) {
             return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
@@ -1424,7 +1410,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             generateHeader();
         });
     </script>
-    <script>
+<script>
         function openTab(event, tabName) {
             // Alle Tab-Contents ausblenden
             var i, tabContents, tabButtons;
