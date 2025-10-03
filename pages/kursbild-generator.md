@@ -436,7 +436,7 @@ image: "/assets/images/2025-04-06-kursbild.png"
             <button id="download-png-btn">PNG</button>
             <button id="generate-btn">Aktualisieren</button>
         </div>
-    </div>
+</div>
 <br /><br />
 <h3>FAQ – Häufig gestellte Fragen</h3>
 <details>
@@ -1030,6 +1030,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         gradientDef = `<linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${primaryColorValue}" /><stop offset="100%" stop-color="${secondaryColorValue}" /></linearGradient>`;
                     }
                 }
+let bgRect = '';
+    const isTransparentFill = (gradientTypeValue === "none" && primaryTransparent) ||
+                              (gradientTypeValue !== "none" && primaryTransparent && secondaryTransparent);
+    if (!isTransparentFill) {
+        bgRect = `<rect width="100%" height="100%" ${fillColor} />`;
+    }
                 // Sammle alle Symbole in defs
                 let symbolDefs = Object.values(symbols).join("");
                 // Bildelemente erstellen mit <use>
@@ -1075,19 +1081,20 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
                 }
                 // SVG zusammenbauen
-                const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
-            <defs>${gradientDef}${symbolDefs}${createPattern(
-                    pattern,
-                    primaryColorValue,
-                    duration,
-                    animationType
-                )}</defs>
-            <rect width="100%" height="100%" ${fillColor} />
-            <rect width="100%" height="100%" fill="url(#${pattern}-pattern)" />
-            ${uploadedImageElements}
-            ${textElement}
-        </svg>`;
-                svgContainer.innerHTML = svg;
+ const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
+        <defs>${gradientDef}${symbolDefs}${createPattern(pattern, primaryColorValue, duration, animationType)}</defs>
+        ${bgRect}
+        <rect width="100%" height="100%" fill="url(#${pattern}-pattern)" />
+        ${uploadedImageElements}
+        ${textElement}
+    </svg>`;
+    svgContainer.innerHTML = svg;
+    // Reflow-Hack für Safari (aus vorheriger Antwort)
+    setTimeout(() => {
+        svgContainer.style.display = 'none';
+        svgContainer.offsetHeight; // Erzwingt Reflow
+        svgContainer.style.display = 'block';
+    }, 0);
                 // Drag-Events für Text-Element
                 if (headerText && headerText.trim() !== "") {
                     const draggableText = document.getElementById("draggable-text");
