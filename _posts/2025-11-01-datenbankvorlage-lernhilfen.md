@@ -59,7 +59,7 @@ Mit einem Klick auf die Überschrift erhält man sofort den Link als Text oder Q
 
 [![Screenshot Beispiel](/assets/images/2025-11-01_lernhilfe2.png)](/assets/images/2025-11-01_lernhilfe2.png){: style="width: 100%;max-width: 800px;display: block; margin: 0 auto"}
 
-### Eibinden von H5P
+### Einbinden von H5P
 Die Datenbankaktivität lässt das Einbinden von iframes nicht zu. Um eine H5P einzubetten muss man folgenden Weg gehen:
 
 - Im Menü "Werkzeuge" "Medien verwalten" auswählen.
