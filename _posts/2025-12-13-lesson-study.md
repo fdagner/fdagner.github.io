@@ -2,7 +2,7 @@
 layout: post
 title: Lesson Study
 date: 2025-12-13T14:30:00
-image: "/assets/images/2025-11-13-lesson-study.jpg"
+image: "/assets/images/2025-12-13_lesson_study.jpg"
 categories:
   - unterricht
   - moodle
