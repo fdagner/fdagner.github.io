@@ -8,7 +8,7 @@ categories:
   - moodle
 ---
 
-**Unterricht weiterzuentwickeln gelingt am besten gemeinsam, auf der Basis konkreter Beobachtungen von Lernprozessen. Genau hier setzt Lesson Study an. Als Teilnehmer eines Lesson-Study-Projekts in Bayern durfte ich gemeinsam mit vier Kollegen aus dem Fach BwR (Betriebswirtschaftslehre und Rechnungswesen) diesen Ansatz praktisch erproben. Im Mittelpunkt stand eine Hospitation zum Stundenthema Umsatzsteuer bzw. Prozentrechnung, bei der wir den Einsatz digitaler Tools, konkret H5P, systematisch untersucht haben. Die dabei gewonnenen Erkenntnisse waren überraschend tiefgehend und gewinnbringend.**
+**Unterricht weiterzuentwickeln gelingt am besten gemeinsam, auf der Basis konkreter Beobachtungen von Lernprozessen. Genau hier setzt Lesson Study an. Als Teilnehmer eines Lesson-Study-Projekts in Bayern durfte ich gemeinsam mit drei Kollegen aus dem Fach BwR (Betriebswirtschaftslehre und Rechnungswesen) diesen Ansatz praktisch erproben. Im Mittelpunkt stand eine Hospitation zum Stundenthema Umsatzsteuer bzw. Prozentrechnung, bei der wir den Einsatz digitaler Tools, konkret H5P, systematisch untersucht haben. Die dabei gewonnenen Erkenntnisse waren überraschend tiefgehend und gewinnbringend.**
 
 ### Was ist Lesson Study eigentlich?
 Lesson Study ist ein aus Japan stammendes Konzept der kooperativen Unterrichtsentwicklung, das dort seit über 100 Jahren fest im Schulalltag verankert ist. Lehrkräfte planen dabei gemeinsam eine Unterrichtsstunde, führen sie durch, beobachten gezielt das Lernen einzelner Schüler und reflektieren anschließend gemeinsam die Ergebnisse.
