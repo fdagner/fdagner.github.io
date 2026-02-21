@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hospitationsbogen
-date: 2026-02-21T20:30:00
+date: 2026-02-21T19:30:00
 image: "/assets/images/2026-02-21_hospitation.png"
 categories:
   - unterricht
