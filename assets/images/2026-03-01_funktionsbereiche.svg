@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" style="width:100%;max-width:980px;display:block;margin-bottom:16px;font-family:Arial,sans-serif;">
+
+    <!-- Wandfläche -->
+    <rect x="110" y="120" width="750" height="400" fill="#f0f4fa" stroke="none"/>
+
+    <!-- Sägezahndach rechts -->
+    <polygon points="500,120 500,30 590,120 590,30 680,120 680,30 770,120 770,30 860,120" fill="#d0daf0" stroke="none"/>
+    <line x1="110" y1="120" x2="500" y2="120" stroke="#1a3a6e" stroke-width="2"/>
+    <polyline points="500,120 500,30 590,120 590,30 680,120 680,30 770,120 770,30 860,120" fill="none" stroke="#1a3a6e" stroke-width="2"/>
+    <polyline points="110,120 110,520 860,520 860,120" fill="none" stroke="#1a3a6e" stroke-width="2.5"/>
+
+    <!-- Unternehmensleitung -->
+    <rect x="135" y="132" width="700" height="56" rx="6" fill="#4a6fa5" stroke="#1a3a6e" stroke-width="1.5"/>
+    <text x="485" y="166" text-anchor="middle" fill="#fff" font-size="19" font-weight="bold">Unternehmensleitung</text>
+
+    <!-- Kaufmännische Leitung -->
+    <rect x="135" y="204" width="310" height="126" rx="6" fill="#c8a4c8" stroke="#7a4a7a" stroke-width="1.5"/>
+    <text x="290" y="228" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Kaufmännische Leitung</text>
+    <!-- Rechnungswesen -->
+    <rect x="150" y="236" width="280" height="40" rx="4" fill="#b080b0" stroke="#7a4a7a" stroke-width="1"/>
+    <text x="290" y="261" text-anchor="middle" fill="#fff" font-size="14">Rechnungswesen</text>
+    <!-- Verwaltung -->
+    <rect x="150" y="282" width="280" height="40" rx="4" fill="#b080b0" stroke="#7a4a7a" stroke-width="1"/>
+    <text x="290" y="307" text-anchor="middle" fill="#fff" font-size="14">Verwaltung</text>
+
+    <!-- Technische Leitung -->
+    <rect x="495" y="204" width="340" height="126" rx="6" fill="#6a9ac4" stroke="#1a3a6e" stroke-width="1.5"/>
+    <text x="665" y="274" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">Technische Leitung</text>
+
+    <!-- Beschaffung -->
+    <rect x="135" y="348" width="190" height="72" rx="6" fill="#8fa8c8" stroke="#1a3a6e" stroke-width="1.5"/>
+    <text x="230" y="378" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Beschaffung</text>
+    <text x="230" y="399" text-anchor="middle" fill="#fff" font-size="13">(Einkauf)</text>
+
+    <!-- Lager Werkstoffe (zweizeilig) -->
+    <rect x="148" y="432" width="164" height="60" rx="4" fill="#fff" stroke="#8fa8c8" stroke-width="1.5"/>
+    <text x="230" y="457" text-anchor="middle" fill="#1a3a6e" font-size="13">Lager</text>
+    <text x="230" y="477" text-anchor="middle" fill="#1a3a6e" font-size="13">Werkstoffe</text>
+
+    <!-- Fertigung -->
+    <rect x="395" y="348" width="200" height="144" rx="6" fill="#8fa8c8" stroke="#1a3a6e" stroke-width="1.5"/>
+    <text x="495" y="400" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Fertigung /</text>
+    <text x="495" y="420" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Herstellung</text>
+    <text x="495" y="440" text-anchor="middle" fill="#fff" font-size="12">(Produktion)</text>
+
+    <!-- Absatz -->
+    <rect x="655" y="348" width="190" height="72" rx="6" fill="#8fa8c8" stroke="#1a3a6e" stroke-width="1.5"/>
+    <text x="750" y="378" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Absatz</text>
+    <text x="750" y="399" text-anchor="middle" fill="#fff" font-size="13">(Verkauf)</text>
+
+    <!-- Lager Fertigerzeugnisse (zweizeilig) -->
+    <rect x="658" y="432" width="194" height="60" rx="4" fill="#fff" stroke="#8fa8c8" stroke-width="1.5"/>
+    <text x="755" y="457" text-anchor="middle" fill="#1a3a6e" font-size="13">Lager</text>
+    <text x="755" y="477" text-anchor="middle" fill="#1a3a6e" font-size="13">Fertigerzeugnisse</text>
+
+    <!-- Lieferant -->
+    <rect x="0" y="362" width="100" height="42" rx="4" fill="#1a3a6e"/>
+    <text x="50" y="388" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Lieferant</text>
+    <line x1="100" y1="383" x2="132" y2="383" stroke="#1a3a6e" stroke-width="2.5"/>
+    <polygon points="129,377 141,383 129,389" fill="#1a3a6e"/>
+
+    <!-- Pfeil Beschaffung → Lager Werkstoffe -->
+    <line x1="230" y1="420" x2="230" y2="430" stroke="#1a3a6e" stroke-width="2"/>
+    <polygon points="225,430 230,439 235,430" fill="#1a3a6e"/>
+
+    <!-- Pfeil Lager Werkstoffe → Fertigung -->
+    <line x1="312" y1="462" x2="392" y2="462" stroke="#1a3a6e" stroke-width="2"/>
+    <polygon points="389,456 401,462 389,468" fill="#1a3a6e"/>
+
+    <!-- Pfeil Fertigung → Lager Fertigerzeugnisse -->
+    <line x1="595" y1="462" x2="655" y2="462" stroke="#1a3a6e" stroke-width="2"/>
+    <polygon points="652,456 664,462 652,468" fill="#1a3a6e"/>
+
+    <!-- Pfeil Lager Fertigerzeugnisse → Absatz -->
+    <line x1="755" y1="432" x2="755" y2="422" stroke="#1a3a6e" stroke-width="2"/>
+    <polygon points="750,422 755,412 760,422" fill="#1a3a6e"/>
+
+    <!-- Kunde -->
+    <rect x="878" y="362" width="100" height="42" rx="4" fill="#1a3a6e"/>
+    <text x="928" y="388" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Kunde</text>
+    <line x1="860" y1="383" x2="876" y2="383" stroke="#1a3a6e" stroke-width="2.5"/>
+    <polygon points="873,377 885,383 873,389" fill="#1a3a6e"/>
+
+  </svg>
