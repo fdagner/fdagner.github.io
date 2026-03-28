@@ -37,7 +37,7 @@ Genau dieses Spannungsfeld löst der Ansatz: Durch die Vorgabe der korrekten Lö
 
 ### Erhoffter Nutzen für die Schüler
 
-- Lernenwirksam: Die Schüler müssen selbst nachdenken, Konten zuordnen, Vorsteuer berechnen und den Buchungssatz bilden.
+- Lernwirksam: Die Schüler müssen selbst nachdenken, Konten zuordnen, Vorsteuer berechnen und den Buchungssatz bilden.
 - Gutes Feedback: Gezielte Fragen und Erklärungen zu Fehlern, ohne dass die Lösung vorweggenommen wird.
 - Viel Übung ohne Frust: Jederzeit neue, zufällige Aufgaben auf Knopfdruck – auch zu Hause.
 - Fachliche Sicherheit: Die KI gibt keine falschen Buchungssätze aus, weil sie die richtige Lösung intern kennt.
