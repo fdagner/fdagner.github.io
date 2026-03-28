@@ -14,7 +14,7 @@ categories:
 
 ### Ausgangspunkt
 
-[meinBwR](https://www.meinbwr.de/lb7-4-einkauf.html) generiert ja zufällige Aufgaben für den Einkauf von Werkstoffen (Jahrgangsstufe 7 / Lernbereich 4). Mit einem Klick entstehen bis zu 30 unterschiedliche Geschäftsfälle – inklusive Aufgabenbeschreibung, korrekter Musterlösung und einem fertigen System-Prompt, den man direkt in ByCS kopieren kann.
+[meinBwR](https://www.meinbwr.de/lb7-4-einkauf.html) generiert ja zufällige Aufgaben, hier als Beispiel für den Einkauf von Werkstoffen (Jahrgangsstufe 7 / Lernbereich 4). Mit einem Klick entstehen bis zu 30 unterschiedliche Geschäftsfälle – inklusive Aufgabenbeschreibung, korrekter Musterlösung und einem fertigen System-Prompt, den man direkt in ByCS kopieren kann.
 
 [![Screenshot Prompt](/assets/images/2026-03-28-personas.png)](/assets/images/2026-03-28-personas.png){: style="width: 100%;max-width: 600px;display: block; margin: 0 auto"}
 
