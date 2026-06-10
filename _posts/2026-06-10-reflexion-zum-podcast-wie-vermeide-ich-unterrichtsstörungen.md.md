@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reflexion zum Podcast - Wie vermeide ich Unterrichtsstörungen?
-date: 2026-06-10T21:30:00
+date: 2026-06-10T21:00:00
 image: "/assets/images/2026-06-10_selbstregulation.png"
 categories:
   - unterricht
