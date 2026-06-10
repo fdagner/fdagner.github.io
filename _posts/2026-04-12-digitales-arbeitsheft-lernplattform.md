@@ -5,6 +5,7 @@ date: 2026-04-12T13:30:00
 image: "/assets/images/2026-04-12_test3.png"
 categories:
   - moodle
+  - bwr
 ---
 
 **Bereits im Schuljahr 2024/25 habe ich ein digitales Arbeitsheft im BwR-Unterricht auf Basis des Moodle-Tests auf der ByCS Lernplattform mit Freitext-Aufgaben erprobt. Die Ergebnisse waren durchweg positiv: Die Schüler hatten kaum technische Hürden zu meistern und arbeiteten sich schnell in das Prinzip ein. Damit ein Moodle-Test jedoch eher einem Arbeitsheft als einer klassischen Prüfung entspricht, sind gezielte Einstellungen notwendig.**
