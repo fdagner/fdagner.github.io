@@ -44,9 +44,9 @@ Für alle, die eingeladen werden, ist der Ablauf denkbar einfach:
 
 ### Warum in Moodle und nicht in einem externen Tool?
 
-- **Keine zusätzlichen Accounts**: Gewohnmte Nutzung der vorhandenen Plattform.
+- **Keine zusätzlichen Accounts**: Gewohnte Nutzung der vorhandenen Plattform.
 - **Datenschutz**: Die Daten verlassen die Moodle-Instanz nicht.
-- **Keine Installation nötig**: Es handelt sich um ein reines Datenbank-Preset (HTML/CSS/JS-Templates), kein zusätzliches Plugin, das erst freigeschaltet werden müsste. Zusätzlich können die üblichen Einstellungen genutzt werden, z. B. Einträge freischalten, Anzahl der Einträge begrenzen, Nutzer anonymisieren usw.
+- **Keine Installation nötig**: Es handelt sich um ein reines Datenbank-Preset, kein zusätzliches Plugin, das erst freigeschaltet werden müsste. Zusätzlich können die üblichen Einstellungen genutzt werden, z. B. Einträge freischalten, Anzahl der Einträge begrenzen, Nutzer anonymisieren usw.
 
 Wer regelmäßig Termine mit größeren Gruppen abstimmen muss, spart sich mit dieser Vorlage den Umweg über externe Terminfindungs-Tools – und bleibt dabei komplett in der gewohnten Lernplattform.
 
